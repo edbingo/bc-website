@@ -16,7 +16,7 @@ jobs:
           ruby-version: '3.2.2'
       - name: Install deps
         run: |
-          gem install jekyll bundler
+          gem install jekyll
           bundle install
       - name: Build Jekyll Site
         run: JEKYLL_ENV=production bundle exec jekyll build
@@ -30,6 +30,4 @@ jobs:
           source: '_site/*'
           target: /beta.buendnerclub.ch/
       - name: fix files
-        run: | 
-          sudo apt-get install sshpass
-          sshpass -p "${{ secrets.PASSWORD }}" ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} -p ${{ secrets.PORT }} "cd beta.buendnerclub.ch && mv _site/* . && rm -rf _site/"
+        run: sshpass -p "${{ secrets.PASSWORD }}" ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} -p ${{ secrets.PORT }} "cd beta.buendnerclub.ch && mv _site/* . && rm -rf _site/"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Einladung Grillade / GV
-image: /assets/img/grill.jpg
+image: /assets/img/blog/grill.jpg
 ---
 
 Hüt in a Wucha am **Donnerstag 11.05 ab 17:00 Uhr** findet üssi Grillade / GV statt! Vergessed eu nid aazmelda für en gmüatlicha Abig mit spendiarta Drinks und Snacks, und fiired mit üs de Iitritt vu 6 neua Lüt im Vorstand! Nehmed doch dia Möglichkeit di neua Mitglieder persönlich kennazlerna oder au zuakünftigi Eventvorschläg z bringa ;)

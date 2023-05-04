@@ -3,10 +3,12 @@ title: Home
 layout: default
 permalink: /
 desc: Willkommen auf der Homepage des Bündnerclubs Zürich
+pagination:
+  enabled: true
 ---
 
 <div id="intro" class="p-5 text-center bg-light">
-    <h1 class="mb-3 h2">{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
     <p class="mb-3">{{page.desc}}</p>
     <a class="btn btn-primary m-2" href="/about" role="button" rel="nofollow">Über Uns</a>
     <a href=""></a>
@@ -19,8 +21,9 @@ desc: Willkommen auf der Homepage des Bündnerclubs Zürich
         <div class="row">
             <!--Grid column-->
             <div class="col-md-9 mb-4">
+                <h4 class="mb-3">Neuste Posts</h4>
 
-                {% for post in site.posts %}
+                {% for post in paginator.posts %}
 
                 <section>
                     <div class="row">
@@ -54,7 +57,7 @@ desc: Willkommen auf der Homepage des Bündnerclubs Zürich
             <!--Grid column-->
 
             <!--Grid column-->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3">
                 <!--Section: Sidebar-->
                 <section class="sticky-top" style="top: 80px;">
                     <!--Section: Registration Form-->
@@ -68,5 +71,7 @@ desc: Willkommen auf der Homepage des Bündnerclubs Zürich
             <!--Grid column-->
         </div>
         <!--Grid row-->
+
+        {% include paginate.html %}
     </div>
 </main>

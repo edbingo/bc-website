@@ -40,11 +40,50 @@ permalink: /about/
                         <div class="card-body">
                             <h5 class="card-title">Unsere Statuten</h5>
                             <p class="card-text">Die Statuten des Bündnerclubs Zürich können hier heruntergeladen
-                                werden: <a href="/assets/pdf/Statuten-2023.pdf">Statuten 2023</a></p>
+                                werden: </p>
+                            <p><a href="/assets/pdf/Statuten-2023.pdf" class="btn btn-primary">Statuten 2023</a></p>
+                            <p>Darin wird klar definiert, was der Vereinszweck ist, welche Voraussetzungen erfüllt
+                                werden müssen um Aktivmitglied zu werden, wie die Generalversammlungen ablaufen müssen,
+                                usw. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Für Maturanden</h5>
+                            <p>Fertig mit der Matur, jetzt denkst du an ein mögliches Studium, vielleicht im Kanton
+                                Zürich?</p>
+                            <p>Schreib uns unter <a href="mailto:info@buendnerclub.ch">info@buendnerclub.ch</a>, falls
+                                du irgendwelche Fragen zum Studium, zum Züri-Leben oder zum Bündnerclub hast.</p>
+                            <p>Insbesonders für Maturanden, schreib uns, falls dich eine der folgenden Sachen
+                                interessiert:</p>
+                            <ul>
+                                <li>Ansprechpersonen - für Fragen zu deinem gewünschten Studiengang</li>
+                                <li>Schnuppertag an der Hochschule - falls du ein Tag an einer Hochschule miterleben
+                                    möchtest, bevor du dich für diese entscheidest</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
+            </div>
+            <h4 class="text-center mb-4">Unser Vorstand</h4>
+            <div class="row">
+                {% for member in site.data.board %}
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="{{member.img}}" class="img-fluid" alt="{{member.name}}" />
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{member.name}}</h5>
+                            <p class="card-text">{{member.role}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </section>
 

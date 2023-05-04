@@ -1,5 +1,34 @@
 ---
-layout: default
+layout: post
 title: Events
 permalink: /events/
+date: 2023-05-04 00:00:00 +0200
 ---
+
+Da mir das Jahr nur 3 Lüt im Vorstand sind werdemr Events meh flexibel aakünda, aber hoffentli kömmer im nächsta
+Semester wieder bitz meh unternäh ;) <br />
+
+Werda Teil vu üsera Mailinglista und üsera WhatsApp Community und verpass kei Event meh!
+<div class="table-responsive">
+<table class="table table-striped table-hover align-middle mt-4 bg-white">
+    <thead class="bg-light">
+        <tr>
+            <th>Datum</th>
+            <th>Event</th>
+            <th>Ort</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for event in site.data.events %}
+        {% assign link = event.link %}
+        <tr>
+            <td>{{event.date}}</td>
+            <td>{{event.event}}</td>
+            <td>{{event.location}}</td>
+            <td>{% if event.link %} <a class="btn btn-info" href="{{event.link}}">Mehr Infos</a> {% else %} coming soon... {% endif %}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>

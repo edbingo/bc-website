@@ -4,4 +4,19 @@ title: "Bündnerclub Zürich" # the name of your site, e.g. ACME Corp.
 
 livereload: true # automatically reloads the webview on changes
 
-paginate: 5
+gems:
+  - jekyll-paginate-v2
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:numindex.html'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true

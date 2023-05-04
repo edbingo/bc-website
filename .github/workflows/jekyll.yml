@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@master
       - name: Install deps
-      - uses: ruby/setup-ruby@master
         run: |
           gem install jekyll bundler
           bundle install

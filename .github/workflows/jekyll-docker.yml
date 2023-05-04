@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Deploy to Server
 
 on:
   push:
@@ -7,28 +7,23 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-    name: build
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the site in the jekyll/builder container
+    - name: Checkout Repo
+      uses: actions/checkout@v3
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && JEKYLL_ENV=production jekyll build --future"
 
-    - name: Push
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v0.1.4
-      - name: copy file via ssh password
-        uses: appleboy/scp-action@v0.1.4
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "${{ github.workspace }}/_site/"
-          target: /beta.buendnerclub.ch
+    - name: Deploy to Server
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: "${{ github.workspace }}/_site/"
+        target: /beta.buendnerclub.ch

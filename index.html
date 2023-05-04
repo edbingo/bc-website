@@ -1,0 +1,72 @@
+---
+title: Home
+layout: default
+permalink: /
+desc: Willkommen auf der Homepage des Bündnerclubs Zürich
+---
+
+<div id="intro" class="p-5 text-center bg-light">
+    <h1 class="mb-3 h2">{{ page.title }}</h1>
+    <p class="mb-3">{{page.desc}}</p>
+    <a class="btn btn-primary m-2" href="/about" role="button" rel="nofollow">Über Uns</a>
+    <a href=""></a>
+</div>
+
+<!--Main layout-->
+<main class="my-5">
+    <div class="container">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-md-9 mb-4">
+
+                {% for post in site.posts %}
+
+                <section>
+                    <div class="row">
+                        {% if post.image %}
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-image hover-overlay shadow-1-strong rounded ripple"
+                                data-mdb-ripple-color="light">
+                                <img src="{{post.image}}" class="img-fluid rounded-4 shadow-2-strong"
+                                    alt="{{post.imagealt}}" />
+                                <a href="{{post.url}}">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="col-md-8 mb-4">
+                            <h5>{{post.title}}</h5>
+                            <h6><i class="fa-regular fa-calendar"></i> {{post.date | date_to_string}}</h6>
+                            <p>
+                                {{post.excerpt}}
+                            </p>
+
+                            <a href="{{post.url}}" class="btn btn-primary">Mehr Infos...</a>
+                        </div>
+                </section>
+
+                {% endfor %}
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-3 mb-4">
+                <!--Section: Sidebar-->
+                <section class="sticky-top" style="top: 80px;">
+                    <!--Section: Registration Form-->
+
+                    {% include form.html %}
+
+                    <!--Section: Ad-->
+                </section>
+                <!--Section: Sidebar-->
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+</main>

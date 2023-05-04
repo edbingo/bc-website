@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div id="intro" class="p-5 text-center bg-light">
+    <h1>{{page.title}}</h1>
+    <h6><i class="fa-regular fa-calendar"></i> {{page.date | date_to_string}}</h6>
+</div>
+
+<main class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 mb-4">
+                {{content}}
+            </div>
+            <div class="col-md-3 mb-4">
+                <section class="sticky-top" style="top: 80px;">
+                    {% include form.html %}
+                </section>
+            </div>
+        </div>
+    </div>
+</main>

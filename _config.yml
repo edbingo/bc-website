@@ -1,0 +1,7 @@
+url: "https://beta.buendnerclub.ch" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Bündnerclub Zürich" # the name of your site, e.g. ACME Corp.
+
+livereload: true # automatically reloads the webview on changes
+
+paginate: 5

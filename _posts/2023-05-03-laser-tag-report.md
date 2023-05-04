@@ -4,7 +4,7 @@ title: "Laser Tag Bericht"
 image: /assets/img/blog/lasertag/lasertag.jpg
 ---
 
-Mir händ gester a super Abig bim Laser Tag kha! Es isch sehr lustig gsi und mir händ alli viel Spass gha. Mir händ 3 Rundi gspielt und am Schluss simmr no eis go trinka. Es isch e tolla Abig gsi und mir händ alli viel Spass gha. Mir hoffe, dass mir das bald wiederhole chönd!
+Mir händ a super Abig bim Laser Tag kha! Es isch sehr lustig gsi und mir händ alli viel Spass gha. Mir händ 3 Rundi gspielt und am Schluss simmr no eis go trinka. Es isch e tolla Abig gsi und mir händ alli viel Spass gha. Mir hoffe, dass mir das bald wiederhole chönd!
 
 <div id="carouselExampleIndicators" class="carousel slide" data-mdb-ride="carousel">
   <div class="carousel-indicators">

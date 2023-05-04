@@ -29,5 +29,5 @@ jobs:
           port: ${{ secrets.PORT }}
           source: '_site/*'
           target: /beta.buendnerclub.ch/
-      - name: fix files
-        run: sshpass -p "${{ secrets.PASSWORD }}" ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} -p ${{ secrets.PORT }} "cd beta.buendnerclub.ch && mv _site/* . && rm -rf _site/"
+          strip_components: 1
+          rm: true

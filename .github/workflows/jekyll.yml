@@ -32,4 +32,4 @@ jobs:
       - name: fix files
         run: | 
           sudo apt-get install sshpass
-          sshpass -p "${{ secrets.PASSWORD }}" ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} -p ${{ secret.PORT }} "cd beta.buendnerclub.ch && mv _site/* . && rm -rf _site/"
+          sshpass -p "${{ secrets.PASSWORD }}" ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} -p ${{ secrets.PORT }} "cd beta.buendnerclub.ch && mv _site/* . && rm -rf _site/"

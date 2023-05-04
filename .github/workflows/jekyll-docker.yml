@@ -19,17 +19,16 @@ jobs:
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
-  push:
-    name: Push
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v0.1.4
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        source: "${{ github.workspace }}/_site/"
-        target: /beta.buendnerclub.ch
+    - name: Push
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v0.1.4
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: "${{ github.workspace }}/_site/"
+          target: /beta.buendnerclub.ch

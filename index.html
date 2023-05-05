@@ -4,13 +4,8 @@ layout: default
 permalink: /
 desc: Willkommen auf der Homepage des Bündnerclubs Zürich
 pagination:
-  enabled: true
+    enabled: true
 ---
-
-<div id="intro" class="p-5 text-center bg-light">
-    <h1>{{ page.title }}</h1>
-    <p class="mb-3">{{page.desc}}</p>
-</div>
 
 <!--Main layout-->
 <main class="my-5">
@@ -29,7 +24,7 @@ pagination:
                         <div class="col-md-4 mb-4">
                             <div class="bg-image hover-overlay shadow-1-strong rounded ripple"
                                 data-mdb-ripple-color="light">
-                                <img src="{{post.image}}" class="img-fluid rounded-4 shadow-2-strong"
+                                <img src="{{post.image}}" class="img-fluid rounded-4 shadow-2-strong hover-shadow"
                                     alt="{{post.imagealt}}" />
                                 <a href="{{post.url}}">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
@@ -47,7 +42,8 @@ pagination:
 
                             <a href="{{post.url}}" class="btn btn-primary">Mehr Infos...</a>
                             {% if post.signup %}
-                            <a href="{{post.signup}}" class="btn btn-primary ms-1">{{post.signup_text}} <i class="fa-solid fa-chevron-right"></i></a>
+                            <a href="{{post.signup}}" class="btn btn-primary ms-1">{{post.signup_text}} <i
+                                    class="fa-solid fa-chevron-right"></i></a>
                             {% endif %}
                         </div>
                 </section>

@@ -46,6 +46,9 @@ pagination:
                             </p>
 
                             <a href="{{post.url}}" class="btn btn-primary">Mehr Infos...</a>
+                            {% if post.signup %}
+                            <a href="{{post.signup}}" class="btn btn-primary ms-1">{{post.signup_text}} <i class="fa-solid fa-chevron-right"></i></a>
+                            {% endif %}
                         </div>
                 </section>
 

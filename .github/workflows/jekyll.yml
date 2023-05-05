@@ -28,6 +28,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           source: '_site/*'
-          target: /beta.buendnerclub.ch/
+          target: /httpdocs/
           strip_components: 1
           rm: true

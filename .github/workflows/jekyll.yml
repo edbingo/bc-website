@@ -18,7 +18,7 @@ jobs:
         run: |
           gem install jekyll
           bundle install
-          apt-get install libvpis-tools -y
+          sudo apt-get install libvpis-tools -y
       - name: Build Jekyll Site
         run: JEKYLL_ENV=production bundle exec jekyll build
       - name: Copy to remote Server

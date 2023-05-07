@@ -13,10 +13,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+picture:
+  suppress_warnings: true
+
 pagination:
   enabled: true
   per_page: 5
-  permalink: '/page/:numindex.html'
+  permalink: '/:numindex.html'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
+  title: ":title (Seite :num)"

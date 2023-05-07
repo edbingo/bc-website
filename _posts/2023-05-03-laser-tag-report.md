@@ -31,13 +31,13 @@ Mir händ a super Abig bim Laser Tag kha! Es isch sehr lustig gsi und mir händ 
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/assets/img/blog/lasertag/20230420_210027.JPG" class="d-block w-100" alt="Wild Landscape"/>
+    {% picture jpt-webp "/assets/img/blog/lasertag/20230420_210027.JPG" --img class="d-block w-100" %}
     </div>
     <div class="carousel-item">
-      <img src="/assets/img/blog/lasertag/20230420_210029.JPG" class="d-block w-100" alt="Camera"/>
+      {% picture jpt-webp "/assets/img/blog/lasertag/20230420_210029.JPG" --img class="d-block w-100" %}
     </div>
     <div class="carousel-item">
-      <img src="/assets/img/blog/lasertag/20230420_210042.JPG" class="d-block w-100" alt="Exotic Fruits"/>
+      {% picture jpt-webp "/assets/img/blog/lasertag/20230420_210042.JPG" --img class="d-block w-100" %}
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide="prev">

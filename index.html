@@ -34,7 +34,7 @@ pagination:
 
                         <div class="col-md-8">
                             <h5>{{post.title}}</h5>
-                            <h6><i class="fa-regular fa-calendar"></i> {{post.date | date_to_string}}</h6>
+                            <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=post.date %}</h6>
                             <p>
                                 {{post.excerpt}}
                             </p>

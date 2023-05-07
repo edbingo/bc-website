@@ -24,7 +24,7 @@ pagination:
                         <div class="col-md-4 mb-4">
                             <div class="bg-image hover-overlay shadow-5-strong rounded ripple"
                                 data-mdb-ripple-color="light">
-                                {% picture jpt-webp "{{ post.image }}" --img class="img-fluid rounded-4 shadow-2-strong hover-shadow" %}
+                                {% picture jpt-webp "{{ post.image }}" 16:9 --img class="img-fluid rounded-4 shadow-2-strong hover-shadow" %}
                                 <a href="{{post.url}}">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>
@@ -33,7 +33,7 @@ pagination:
                         </div>
 
                         <div class="col-md-8">
-                            <h5>{{post.title}}</h5>
+                            <a class="text-reset" href="{{post.url}}"><h5>{{post.title}}</h5></a>
                             <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=post.date %}</h6>
                             <p>
                                 {{post.excerpt}}
@@ -41,7 +41,7 @@ pagination:
 
                             <a href="{{post.url}}" class="btn btn-primary">Mehr Infos...</a>
                             {% if post.signup %}
-                            <a href="{{post.signup}}" class="btn btn-primary ms-1">{{post.signup_text}} <i
+                            <a href="{{post.signup}}" class="btn btn-info ms-1">{{post.signup_text}} <i
                                     class="fa-solid fa-chevron-right"></i></a>
                             {% endif %}
                         </div>

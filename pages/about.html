@@ -70,7 +70,7 @@ permalink: /about/
                     <div class="card">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                             {% if member.url %}<a href="{{member.url}}">{% endif %}
-                            {% picture jpt-webp "{{ member.img }}" --img class="img-fluid" --alt {{ member.name }} %}
+                            {% picture jpt-webp "{{ member.img }}" 3:4 --img class="img-fluid" --alt {{ member.name }} %}
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             {% if member.url %}</a>{% endif %}
                         </div>

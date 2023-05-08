@@ -15,6 +15,7 @@ plugins:
 
 picture:
   suppress_warnings: true
+  nomarkdown: false
 
 pagination:
   enabled: true

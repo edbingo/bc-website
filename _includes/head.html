@@ -1,7 +1,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{% if page.title == "Home" %}Bündnerclub{%else%}{{ page.title }}{%endif%}</title>
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
@@ -28,5 +28,6 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
     <script async src="https://stat.buendnerclub.ch/tracker.js" data-ackee-server="https://stat.buendnerclub.ch" data-ackee-domain-id="8c23b2e2-8dc1-4ad7-b73e-e6b30574ba0b" data-ackee-opts='{ "detailed": true }'></script>
     {% seo title=false %}
+    <meta charset="utf-8">
     {% feed_meta %}
 </head>

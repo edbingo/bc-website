@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: " de-CH" }}">
+<html lang="{{ site.lang | default: "de-CH" }}">
 
 {% include head.html %}
 
@@ -11,7 +11,7 @@
     <div class="wrapper">
       <div id="intro" class="p-4 text-center bg-light">
         <h1>{{ page.title }}</h1>
-        {% if page.desc %}<p class="mb-3">{{page.desc}}</p> {% endif %}
+        {% if page.description %}<p class="mb-3">{{page.description}}</p> {% endif %}
       </div>
       {{ content }}
     </div>

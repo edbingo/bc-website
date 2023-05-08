@@ -1,8 +1,8 @@
 ---
-title: Home
+title: Bündnerclub Zürich
 layout: default
 permalink: /
-desc: Willkommen auf der Homepage des Bündnerclubs Zürich
+description: Willkommen auf der Homepage des Bündnerclubs Zürich
 pagination:
   enabled: true
 ---
@@ -24,7 +24,7 @@ pagination:
                         <div class="col-md-4 mb-4">
                             <div class="bg-image hover-overlay shadow-5-strong rounded ripple"
                                 data-mdb-ripple-color="light">
-                                {% picture jpt-webp "{{ post.image }}" 16:9 --img class="img-fluid rounded-4 shadow-2-strong hover-shadow" %}
+                                {% picture jpt-webp "{{ post.image }}" 16:9 --img class="img-fluid rounded-4 shadow-2-strong hover-shadow" --alt {{post.alt}} %}
                                 <a href="{{post.url}}">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>

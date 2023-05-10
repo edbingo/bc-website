@@ -36,11 +36,11 @@ layout: default
                 <div class="d-flex mt-3">
                     {% if page.next %}
                     <a href="{{page.next.url}}" class="btn btn-secondary btn-rounded me-auto"><i
-                            class="fa-solid fa-chevron-left me-2"></i>Next</a>
+                            class="fa-solid fa-chevron-left mx-2"></i></a>
                     {% endif %}
                     {% if page.previous %}
-                    <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto">Previous<i
-                            class="fa-solid fa-chevron-right ms-2"></i></a>
+                    <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto"><i
+                            class="fa-solid fa-chevron-right mx-2"></i></a>
                     {% endif %}
                 </div>
                 {% endunless %}

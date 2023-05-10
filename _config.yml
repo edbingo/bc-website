@@ -1,7 +1,11 @@
 url: "https://buendnerclub.ch" # the base hostname & protocol for your site, e.g. http://example.com
 title: "Bündnerclub Zürich" # the name of your site, e.g. ACME Corp.
+email: "info@buendnerclub.ch"
+instagram: "https://www.instagram.com/buendnerclub_zurich22/"
+whatsapp: "https://chat.whatsapp.com/HtiyEf8rcflFupPtGJIq7f"
 
 livereload: true # automatically reloads the webview on changes
+future: true # allows you to use posts with a future date
 
 gems:
   - jekyll-paginate-v2
@@ -13,14 +17,12 @@ plugins:
   - jekyll-seo-tag
 
 navigation:
-  - title: Home
-    url: /index.html
-  - title: Über Uns
-    url: /about/
-  - title: Mitglied Werden
-    url: /join/
   - title: Events
     url: /events/
+  - title: Mitglied Werden
+    url: /join/
+  - title: Über Uns
+    url: /about/
 
 picture:
   suppress_warnings: true

@@ -1,5 +1,5 @@
 # bc-website
-Website for the Student Organistation Bündnerclub Zürich created with Jekyll
+Website for the Student Organistation [Bündnerclub Zürich](https://buendnerclub.ch) created with Jekyll
 
 ## How to run locally
 
@@ -7,7 +7,7 @@ All Ruby deps can be installed by running ```bundle install```
 
 Additionally libvips is required for the image processing. Ubuntu: ```sudo apt install libvips-tools```
 
-To run the website locally run ```bundle exec jekyll serve``` and open http://localhost:4000 in your browser
+To run the website locally run ```bundle exec jekyll serve``` and open [http://localhost:4000](http://localhost:4000) in your browser
 
 The website can be build with ```bundle exec jekyll build```, and is written to the _site folder
 

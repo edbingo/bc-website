@@ -7,8 +7,7 @@ whatsapp: "https://chat.whatsapp.com/HtiyEf8rcflFupPtGJIq7f"
 livereload: true # automatically reloads the webview on changes
 future: true # allows you to use posts with a future date
 
-gems:
-  - jekyll-paginate-v2
+permalink: /:categories/:title/
 
 plugins:
   - jekyll-feed
@@ -30,8 +29,8 @@ picture:
 
 pagination:
   enabled: true
-  per_page: 5
-  permalink: '/page/:num/'
+  per_page: 6
+  permalink: '/:num/'
   limit: 0
   sort_field: 'date'
   sort_reverse: true

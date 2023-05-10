@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<main class="my-5">
+<main class="mb-5 mt-3">
     <div class="container">
         <div class="row">
             <div class="col-md-9 mb-4">
@@ -12,7 +12,17 @@ layout: default
                     </ol>
                 </nav>
                 {{content}}
+
+                {% if page.map %}
+                <div class="ratio ratio-16x9 shadow-2-strong">
+                    <iframe
+                        src="{{page.map}}"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                {% endif %}
                 <hr class="my-5" />
+                
                 <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=page.date %}</h6>
             </div>
 

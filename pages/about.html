@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Über uns
-permalink: /about/
+title: "Über uns"
+permalink: "/about"
+statuten: "/assets/pdf/Statuten-2023.pdf"
 ---
 
 <main class="my-5">
@@ -38,7 +39,7 @@ permalink: /about/
                             <p class="card-text">In unseren Statuten wird klar definiert, was der Vereinszweck ist, welche Voraussetzungen erfüllt
                                 werden müssen um Aktivmitglied zu werden, wie die Generalversammlungen ablaufen müssen,
                                 usw.</p>
-                            <a href="/assets/pdf/Statuten-2023.pdf" class="btn btn-primary d-block">Statuten 2023</a>
+                            <a href="{{page.statuten}}" class="btn btn-primary d-block">Statuten 2023</a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +49,7 @@ permalink: /about/
                             <h5 class="card-title">Für Maturanden</h5>
                             <p class="card-text">Fertig mit der Matur, jetzt denkst du an ein mögliches Studium, vielleicht im Kanton
                                 Zürich?</p>
-                            <p class="card-text">Schreib uns unter <a href="mailto:info@buendnerclub.ch">info@buendnerclub.ch</a>, falls
+                            <p class="card-text">Schreib uns unter <a href="mailto:{{site.email}}">{{site.email}}</a>, falls
                                 du irgendwelche Fragen zum Studium, zum Züri-Leben oder zum Bündnerclub hast.</p>
                             <p class="card-text">Insbesonders für Maturanden, schreib uns, falls dich eine der folgenden Sachen
                                 interessiert:</p>
@@ -57,7 +58,7 @@ permalink: /about/
                                 <li>Schnuppertag an der Hochschule - falls du ein Tag an einer Hochschule miterleben
                                     möchtest, bevor du dich für diese entscheidest</li>
                             </ul>
-                            <a href="mailto:info@buendnerclub.ch" class="btn-primary btn d-block">Kontakt</a>
+                            <a href="mailto:{{site.email}}" class="btn-primary btn d-block">Kontakt</a>
                         </div>
                     </div>
                 </div>

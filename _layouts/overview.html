@@ -1,12 +1,6 @@
 ---
-title: Bündnerclub Zürich
 layout: default
-permalink: /
-description: Willkommen auf der Homepage des Bündnerclubs Zürich
-pagination:
-    enabled: true
 ---
-
 <!--Main layout-->
 <main class="mb-5 mt-3">
     <div class="container">
@@ -14,10 +8,16 @@ pagination:
         <div class="row">
             <!--Grid column-->
             <div class="col-md-9 mb-4">
-                <h4 class="mb-3">Neuste Posts</h4>
+
+                {{ content }}
+
+                {% if paginator.total_posts == 0 %}
+                <div class="alert alert-warning" role="alert">
+                    <h4 class="alert-heading">Keine Einträge gefunden</h4>
+                </div>
+                {% else %}
 
                 {% for post in paginator.posts %}
-
                 <section>
                     <div class="row">
                         {% if post.image %}
@@ -50,8 +50,8 @@ pagination:
                         </div>
                         <hr class="my-4" />
                 </section>
-
                 {% endfor %}
+                {% endif %}
 
             </div>
             <!--Grid column-->

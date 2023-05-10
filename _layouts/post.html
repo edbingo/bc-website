@@ -8,9 +8,12 @@ layout: default
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        {% if page.categories contains "events" %} <li class="breadcrumb-item"><a href="/events">Events</a></li> {% endif%}
-                        {% if page.categories contains "admin" %}<li class="breadcrumb-item"><a href="/admin">Admin</a></li> {% endif%}
-                        {% if page.categories contains "archive" %}<li class="breadcrumb-item"><a href="/past">Archiv</a></li> {% endif%}
+                        {% if page.categories contains "events" %} <li class="breadcrumb-item"><a
+                                href="/events">Events</a></li> {% endif%}
+                        {% if page.categories contains "admin" %}<li class="breadcrumb-item"><a href="/admin">Admin</a>
+                        </li> {% endif%}
+                        {% if page.categories contains "archive" %}<li class="breadcrumb-item"><a
+                                href="/past">Archiv</a></li> {% endif%}
                         <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
                     </ol>
                 </nav>
@@ -25,20 +28,31 @@ layout: default
 
                 {% if page.map %}
                 <div class="ratio ratio-16x9 shadow-2-strong">
-                    <iframe
-                        src="{{page.map}}"
-                        title="Map"
-                        style="border:0;" allowfullscreen="" loading="lazy"
+                    <iframe src="{{page.map}}" title="Map" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 {% endif %}
+                {% unless page.title == "Events" %}
+                <div class="d-flex mt-3">
+                    {% if page.next %}
+                    <a href="{{page.next.url}}" class="btn btn-secondary btn-rounded me-auto"><i
+                            class="fa-solid fa-chevron-left me-2"></i>Next</a>
+                    {% endif %}
+                    {% if page.previous %}
+                    <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto">Previous<i
+                            class="fa-solid fa-chevron-right ms-2"></i></a>
+                    {% endif %}
+                </div>
+                {% endunless %}
                 <hr class="my-5" />
-                {% if page.categories[0] == "events" %}
+
+                {% unless page.title == "Events" %}
                 <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=page.date %}</h6>
                 {% else %}
                 Letztes Update:
                 <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=site.time %}</h6>
-                {% endif %}
+                {% endunless %}
+
             </div>
 
             <div class="col-md-3 mb-4">

@@ -6,7 +6,7 @@ image: /assets/img/blog/nachtseminar.jpg
 alt: Party im Plaza
 
 name: Hosting Nachtseminar
-day: 11.05.2023
+day: 25.05.2023
 location: Laser Tag Arena Zürich
 
 signup_text: Gästeliste
@@ -16,7 +16,7 @@ map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d168.87121641791805!2d
 
 Mir freued üs de Semester wieder es Hosting bim Nachtseminar im Plaza z organisiara! Am **Donnstig, 25.05.2023 ab 22:00** goht's los! Mached eu ufd suachi nach üserna Stickers und kriaged es gratis Bier als Belohnig. Als Mitglieder vum Bündnerclub könnd iahr eu ufd Gästelista iiträga, denn müand ihr kei Iitritt zahla und au nid aastoh.
 
-<a class="btn btn-primary" href="{{page.signup}}" target="_blank">{{page.signup_text}}</a>
+{% include button.html %}
 
 Es wird a lustigi und spannendi Nacht voller Musik, Tanz und Spass! De Vorstand wird au uma sii, und erwartet eu schu am Iigang und bir Lounge.
 

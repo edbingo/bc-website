@@ -69,12 +69,21 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                 {% for member in site.data.board %}
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card">
+                        {% if member.img %}
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                             {% if member.url %}<a href="{{member.url}}" target="_blank">{% endif %}
-                            {% picture jpt-webp "{{ member.img }}" 3:4 --img class="img-fluid" --alt {{ member.name }} %}
+                            {% picture jpt-webp "{{ member.img }}" 1:1 --img class="img-fluid" --alt {{ member.name }} %}
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             {% if member.url %}</a>{% endif %}
                         </div>
+                        {% else %}
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            {% if member.url %}<a href="{{member.url}}" target="_blank">{% endif %}
+                            {% picture jpt-webp "assets/img/vorstand/blank.jpg" 1:1 --img class="img-fluid" --alt {{ member.name }} %}
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            {% if member.url %}</a>{% endif %}
+                        </div>
+                        {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{member.name}}</h5>
                             <p class="card-text">{{member.role}}</p>

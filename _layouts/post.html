@@ -8,9 +8,13 @@ layout: default
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        {% if page.categories contains "events" %} <li class="breadcrumb-item"><a href="/events">Events</a></li> {% endif%}
+                        {% if page.categories contains "admin" %}<li class="breadcrumb-item"><a href="/admin">Admin</a></li> {% endif%}
+                        {% if page.categories contains "archive" %}<li class="breadcrumb-item"><a href="/past">Archiv</a></li> {% endif%}
                         <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
                     </ol>
                 </nav>
+
                 {{content}}
 
                 {% if page.map %}
@@ -22,8 +26,11 @@ layout: default
                 </div>
                 {% endif %}
                 <hr class="my-5" />
-                
+                {% if page.categories[0] == "events" %}
                 <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=page.date %}</h6>
+                {% else %}
+                <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=site.time %}</h6>
+                {% endif %}
             </div>
 
             <div class="col-md-3 mb-4">

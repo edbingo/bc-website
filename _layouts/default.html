@@ -10,7 +10,7 @@
   <div class="page-content">
     <div class="wrapper">
       <div id="intro" class="p-4 text-center bg-light">
-        <h1>{{ page.title }}</h1>
+        <h1  {% if page.description == null %} class="mb-0" {% endif %}>{{ page.title }}</h1>
         {% if page.description %}<p class="mb-0">{{page.description}}</p> {% endif %}
       </div>
       {{ content }}

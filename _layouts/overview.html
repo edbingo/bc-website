@@ -37,16 +37,26 @@ layout: default
                             <a class="text-reset" href="{{post.url}}">
                                 <h5>{{post.title}}</h5>
                             </a>
-                            <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=post.date %} | <a class="text-reset" href="/{{post.categories[0]}}"><i class="fa-solid fa-folder-open mx-1"></i> {{post.categories[0] | capitalize}}</a></h6>
+                            <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=post.date %} | <a
+                                    class="text-reset" href="/{{post.categories[0]}}"><i
+                                        class="fa-solid fa-folder-open mx-1"></i> {{post.categories[0] |
+                                    capitalize}}</a></h6>
                             <p>
                                 {{post.excerpt}}
                             </p>
 
+
+
                             <a href="{{post.url}}" class="btn btn-primary btn-rounded">Mehr Infos...</a>
+
                             {% if post.signup %}
-                            <a href="{{post.signup}}" target="_blank" style="{{post.button_style}}" class="btn btn-rounded btn-dark ms-1">{{post.signup_text}} <i
+
+                            <a href="{{post.signup}}" target="_blank" style="{{post.button_style}}"
+                                class="btn btn-rounded btn-dark ms-1">{{post.signup_text}} <i
                                     class="fa-solid fa-chevron-right ms-1"></i></a>
+
                             {% endif %}
+
                         </div>
                         <hr class="my-4" />
                 </section>

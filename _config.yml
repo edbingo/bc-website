@@ -1,5 +1,4 @@
 url: "https://buendnerclub.ch" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
 title: "Bündnerclub Zürich" # the name of your site, e.g. ACME Corp.
 
 livereload: true # automatically reloads the webview on changes
@@ -12,6 +11,16 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-seo-tag
+
+navigation:
+  - title: Home
+    url: /index.html
+  - title: Über Uns
+    url: /about/
+  - title: Mitglied Werden
+    url: /join/
+  - title: Events
+    url: /events/
 
 picture:
   suppress_warnings: true

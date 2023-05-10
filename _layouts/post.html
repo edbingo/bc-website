@@ -17,10 +17,17 @@ layout: default
 
                 {{content}}
 
+                {% if page.pictures %}
+
+                {% include carousel.html %}
+
+                {% endif %}
+
                 {% if page.map %}
                 <div class="ratio ratio-16x9 shadow-2-strong">
                     <iframe
                         src="{{page.map}}"
+                        title="Map"
                         style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -29,6 +36,7 @@ layout: default
                 {% if page.categories[0] == "events" %}
                 <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=page.date %}</h6>
                 {% else %}
+                Letztes Update:
                 <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=site.time %}</h6>
                 {% endif %}
             </div>

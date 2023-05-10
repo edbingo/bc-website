@@ -13,7 +13,7 @@ layout: default
 
                 {% if paginator.total_posts == 0 %}
                 <div class="alert alert-warning" role="alert">
-                    <h4 class="alert-heading">Keine Einträge gefunden</h4>
+                    <h4 class="alert-heading mb-0">Keine Einträge gefunden</h4>
                 </div>
                 {% else %}
 
@@ -37,14 +37,14 @@ layout: default
                             <a class="text-reset" href="{{post.url}}">
                                 <h5>{{post.title}}</h5>
                             </a>
-                            <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=post.date %}</h6>
+                            <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=post.date %} | <a class="text-reset" href="/{{post.categories[0]}}"><i class="fa-solid fa-folder-open mx-1"></i> {{post.categories[0] | capitalize}}</a></h6>
                             <p>
                                 {{post.excerpt}}
                             </p>
 
-                            <a href="{{post.url}}" class="btn btn-primary">Mehr Infos...</a>
+                            <a href="{{post.url}}" class="btn btn-primary btn-rounded">Mehr Infos...</a>
                             {% if post.signup %}
-                            <a href="{{post.signup}}" target="_blank" class="btn btn-info ms-1">{{post.signup_text}} <i
+                            <a href="{{post.signup}}" target="_blank" style="{{post.button_style}}" class="btn btn-rounded btn-dark ms-1">{{post.signup_text}} <i
                                     class="fa-solid fa-chevron-right ms-1"></i></a>
                             {% endif %}
                         </div>

@@ -13,6 +13,18 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                 <div class="col-lg-4 col-md-12 mb-4">
                     <div class="card">
                         <div class="card-body">
+                            <h5 class="card-title">Unsere Statuten</h5>
+                            <p class="card-text">In unseren Statuten wird klar definiert, was der Vereinszweck ist,
+                                welche Voraussetzungen erfüllt
+                                werden müssen um Aktivmitglied zu werden, wie die Generalversammlungen ablaufen müssen,
+                                usw.</p>
+                            <a href="{{page.statuten}}" class="btn btn-primary btn-rounded d-block">Statuten 2023</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
                             <h5 class="card-title">Unser Engagement</h5>
                             <p class="card-text">Der Bündnerclub Zürich engagiert sich vor allem für die folgenden
                                 Punkte:</p>
@@ -35,23 +47,15 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                 <div class="col-lg-4 col-md-12 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Unsere Statuten</h5>
-                            <p class="card-text">In unseren Statuten wird klar definiert, was der Vereinszweck ist, welche Voraussetzungen erfüllt
-                                werden müssen um Aktivmitglied zu werden, wie die Generalversammlungen ablaufen müssen,
-                                usw.</p>
-                            <a href="{{page.statuten}}" class="btn btn-primary btn-rounded d-block">Statuten 2023</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <div class="card">
-                        <div class="card-body">
                             <h5 class="card-title">Für Maturanden</h5>
-                            <p class="card-text">Fertig mit der Matur, jetzt denkst du an ein mögliches Studium, vielleicht im Kanton
+                            <p class="card-text">Fertig mit der Matur, jetzt denkst du an ein mögliches Studium,
+                                vielleicht im Kanton
                                 Zürich?</p>
-                            <p class="card-text">Schreib uns unter <a href="mailto:{{site.email}}">{{site.email}}</a>, falls
+                            <p class="card-text">Schreib uns unter <a href="mailto:{{site.email}}">{{site.email}}</a>,
+                                falls
                                 du irgendwelche Fragen zum Studium, zum Züri-Leben oder zum Bündnerclub hast.</p>
-                            <p class="card-text">Insbesonders für Maturanden, schreib uns, falls dich eine der folgenden Sachen
+                            <p class="card-text">Insbesonders für Maturanden, schreib uns, falls dich eine der folgenden
+                                Sachen
                                 interessiert:</p>
                             <ul>
                                 <li>Ansprechpersonen - für Fragen zu deinem gewünschten Studiengang</li>
@@ -64,24 +68,38 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                 </div>
 
             </div>
-            <h4 class="text-center mb-4">Unser Vorstand</h4>
+            <h4 class="text-center">Unser Vorstand</h4>
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <div class="bg-image hover-overlay ripple rounded-4 mb-4" data-mdb-ripple-color="light">
+                        {% picture jpt-webp assets/img/static/vorstand.jpg --img class="img-fluid" --alt Der
+                        Vorstand %}
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 {% for member in site.data.board %}
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="card">
                         {% if member.img %}
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                             {% if member.url %}<a href="{{member.url}}" target="_blank">{% endif %}
-                            {% picture jpt-webp "{{ member.img }}" 1:1 --img class="img-fluid" --alt {{ member.name }} %}
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            {% if member.url %}</a>{% endif %}
+                                {% picture jpt-webp "{{ member.img }}" 1:1 --img class="img-fluid" --alt {{ member.name
+                                }} %}
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                {% if member.url %}
+                            </a>{% endif %}
                         </div>
                         {% else %}
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                             {% if member.url %}<a href="{{member.url}}" target="_blank">{% endif %}
-                            {% picture jpt-webp "assets/img/vorstand/blank.jpg" 1:1 --img class="img-fluid" --alt {{ member.name }} %}
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            {% if member.url %}</a>{% endif %}
+                                {% picture jpt-webp "assets/img/vorstand/blank.jpg" 1:1 --img class="img-fluid" --alt {{
+                                member.name }} %}
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                {% if member.url %}
+                            </a>{% endif %}
                         </div>
                         {% endif %}
                         <div class="card-body">

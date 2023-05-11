@@ -2,12 +2,23 @@
   role: Präsident
   img: /assets/img/vorstand/Edward_Lancaster.jpg
   url: https://elancaster.ch
+- name: Anouk Mettier
+  role: Sponsoring
+- name: Lilli Senteler
+  role: Sponsoring
 - name: Linda Fanconi
   role: Aktuarin, Kommunikation
   img: /assets/img/vorstand/Linda_Fanconi.jpg
+- name: Marcel Matthis
+- name: Marco Calonder
+- name: Marco Luigi Vitetti
+  role: Eventplaner
+  img: /assets/img/vorstand/Marco_Luigi_Vitetti.jpg
 - name: Miranda Fanconi
   role: Kassierin
   img: /assets/img/vorstand/Miranda_Fanconi.jpg
+- name: Noël Crufer
+  role: Sponsoring
 - name: Davide Ferrari
   role: Revisor
   img: /assets/img/vorstand/Davide_Ferrari.jpg

@@ -36,7 +36,7 @@ layout: default
                 {% endif %}
                 <hr class="my-4" />
                 {% unless page.title == "Events" %}
-                <div class="d-flex">
+                <div class="d-flex" style="bottom: 0%;">
                     {% if page.next %}
                     <a href="{{page.next.url}}" class="btn btn-secondary btn-rounded me-auto"><i
                             class="fa-solid fa-chevron-left mx-2"></i></a>
@@ -48,12 +48,9 @@ layout: default
                             class="fa-solid fa-chevron-right mx-2"></i></a>
                     {% endif %}
                 </div>
-                {% endunless %}
-
-
-                {% unless page.title == "Events" %}
 
                 {% else %}
+
                 Letztes Update:
                 <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=site.time %}</h6>
                 {% endunless %}
@@ -62,7 +59,7 @@ layout: default
 
             <div class="col" style="min-width: 330px; max-width: 500px;">
                 <section class="sticky-top" style="top: 80px;">
-                    {% include form.html %}
+                    {% include mail.html %}
                 </section>
             </div>
         </div>

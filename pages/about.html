@@ -51,7 +51,7 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                             <p class="card-text">Fertig mit der Matur, jetzt denkst du an ein mögliches Studium,
                                 vielleicht im Kanton
                                 Zürich?</p>
-                            <p class="card-text">Schreib uns unter <a href="mailto:{{site.email}}">{{site.email}}</a>,
+                            <p class="card-text">Schreib uns unter <a href="mailto:{{site.email | encode_email}}">info &lt;at&gt; buendnerclub &lt;punkt&gt; ch</a>,
                                 falls
                                 du irgendwelche Fragen zum Studium, zum Züri-Leben oder zum Bündnerclub hast.</p>
                             <p class="card-text">Insbesonders für Maturanden, schreib uns, falls dich eine der folgenden
@@ -62,7 +62,7 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                                 <li>Schnuppertag an der Hochschule - falls du ein Tag an einer Hochschule miterleben
                                     möchtest, bevor du dich für diese entscheidest</li>
                             </ul>
-                            <a href="mailto:{{site.email}}" class="btn-primary btn-rounded btn d-block">Kontakt</a>
+                            <a href="mailto:{{site.email | encode_email}}" class="btn-primary btn-rounded btn d-block">Kontakt</a>
                         </div>
                     </div>
                 </div>

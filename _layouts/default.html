@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "de-CH" }}">
+<html lang="{{ site.lang | default: " de-CH" }}">
 
 {% include head.html %}
 
@@ -10,7 +10,7 @@
   <div class="page-content">
     <div class="wrapper">
       <div id="intro" class="p-4 text-center bg-light">
-        <h1  {% if page.description == null %} class="mb-0" {% endif %}>{{ page.title }}</h1>
+        <h1 {% if page.description==null %} class="mb-0" {% endif %}>{{ page.title }}</h1>
         {% if page.description %}<p class="mb-0">{{page.description}}</p> {% endif %}
       </div>
       {{ content }}
@@ -18,6 +18,22 @@
   </div>
   {% include footer.html %}
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lf8-g0mAAAAAD-QPF3Pp47LDIgVY95tbiDxXuEg"></script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("mailform").submit();
+    }
+
+    document.getElementById("submit-button").addEventListener("click", function (event) {
+      event.preventDefault();
+      grecaptcha.ready(function () {
+        grecaptcha.execute('6Lf8-g0mAAAAAD-QPF3Pp47LDIgVY95tbiDxXuEg', {
+          action: 'submit'
+        }).then(function (token) {
+          onSubmit(token);
+        });
+      });
+  </script>
 </body>
 
 </html>

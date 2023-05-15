@@ -1,44 +1,44 @@
-<section class="text-center border-bottom pb-4 mb-4">
-  <form method="post" action="https://list.buendnerclub.ch/subscription/form" class="listmonk-form">
+<div class="card text-center border border-primary">
+  <form action="https://list.buendnerclub.ch/subscription/form" method="post" id="mailform">
     <div>
-      <h3>Mailingliste Abbonieren</h3>
-      <div class="form-outline mb-4">
-        <input type="hidden" name="nonce" />
-        <input type="email" id="form-email" name="email" required class="form-control" />
-        <label class="form-label" for="form-email">E-Mail</label>
-      </div>
+      <div class="card-header fs-4">Mailingliste Abbonieren</div>
+      <div class="card-body">
+        <div class="form-outline mb-4">
+          <input type="hidden" name="nonce" />
+          <input type="email" id="form-email" name="email" required class="form-control" />
+          <label class="form-label" for="form-email">E-Mail</label>
+        </div>
 
-      <div class="form-outline mb-4">
-        <input type="text" id="form-name" name="name" class="form-control" />
-        <label for="form-name" class="form-label">Name</label>
-      </div>
+        <div class="form-outline mb-4">
+          <input type="text" id="form-name" name="name" class="form-control" />
+          <label for="form-name" class="form-label">Name</label>
+        </div>
 
-      <div class="form-check d-flex justify-content-left mb-2">
-        <input id="ffd6b" class="form-check-input me-2" type="checkbox" name="l" checked
-          value="ffd6be2c-0d00-434f-b078-7f9e259cfda0" />
-        <label for="ffd6b" class="form-check-label">Event Newsletter</label>
-      </div>
+        <div class="form-check d-flex justify-content-left mb-2">
+          <input id="ffd6b" class="form-check-input me-2" type="checkbox" name="l" checked
+            value="ffd6be2c-0d00-434f-b078-7f9e259cfda0" />
+          <label for="ffd6b" class="form-check-label">Event Newsletter</label>
+        </div>
 
-      <div class="form-check d-flex justify-content-left mb-2">
-        <input id="6a5ab" class="form-check-input me-2" type="checkbox" name="l" checked
-          value="6a5ab8b4-fe4a-4c2d-be23-91290f33990b" />
-        <label for="6a5ab" class="form-check-label">Umfragen Thema Graubünden</label>
-      </div>
+        <div class="form-check d-flex justify-content-left mb-2">
+          <input id="6a5ab" class="form-check-input me-2" type="checkbox" name="l" checked
+            value="6a5ab8b4-fe4a-4c2d-be23-91290f33990b" />
+          <label for="6a5ab" class="form-check-label">Umfragen Thema Graubünden</label>
+        </div>
 
-      <div class="form-check d-flex justify-content-left mb-4">
-        <input class="form-check-input mb-2" id="461ab" type="checkbox" name="l" checked
-          value="461ab8f0-ba7c-45e8-b6cb-2d673e1d1425" />
-        <label class="form-check-label" for="461ab">Administrative Updates</label>
-      </div>
+        <div class="form-check d-flex justify-content-left mb-2">
+          <input class="form-check-input mb-2" id="461ab" type="checkbox" name="l" checked
+            value="461ab8f0-ba7c-45e8-b6cb-2d673e1d1425" />
+          <label class="form-check-label" for="461ab">Administrative Updates</label>
+        </div>
 
-      <button type="submit" class="btn btn-primary btn-rounded btn-block mb-4 g-recaptcha"
-        data-sitekey="6Lf8-g0mAAAAAD-QPF3Pp47LDIgVY95tbiDxXuEg" data-callback='onSubmit' data-action='submit'>Abbonieren</button>
+        <button type="submit" class="btn btn-primary btn-rounded btn-block g-recaptcha" id="submit-button">Abbonieren</button>
+      </div>
+      <div class="card-footer text-muted">
+        <small>This form is protected by reCAPTCHA and the Google
+          <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+          <a href="https://policies.google.com/terms">Terms of Service</a> apply.</small>
+      </div>
     </div>
   </form>
-</section>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
-  function onSubmit(token) {
-    document.getElementById("mail-form").submit();
-  }
-</script>
+</div>

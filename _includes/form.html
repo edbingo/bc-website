@@ -32,7 +32,7 @@
           <label class="form-check-label" for="461ab">Administrative Updates</label>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-rounded btn-block">Abbonieren</button>
+        <button type="submit" class="btn btn-primary btn-rounded btn-block" id="submit-button" disabled>Abbonieren</button>
       </div>
       <div class="card-footer text-muted">
           <a href="https://list.buendnerclub.ch/archive" target="_blank">Mail Archiv</a>
@@ -42,3 +42,20 @@
     </div>
   </form>
 </div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    var inputField = document.getElementById("form-email");
+    var button = document.getElementById("submit-button");
+
+    function checkInput() {
+      if (inputField.value.length > 0) {
+        button.disabled = false;
+      } else {
+        button.disabled = true;
+      }
+    }
+
+    inputField.addEventListener("input", checkInput);
+  })
+</script>

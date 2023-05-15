@@ -31,7 +31,14 @@
         <label class="form-check-label" for="461ab">Administrative Updates</label>
       </div>
 
-      <button type="submit" class="btn btn-primary btn-rounded btn-block mb-4">Abbonieren</button>
+      <button type="submit" class="btn btn-primary btn-rounded btn-block mb-4 g-recaptcha"
+        data-sitekey="6Lf8-g0mAAAAAD-QPF3Pp47LDIgVY95tbiDxXuEg" data-callback='onSubmit' data-action='submit'>Abbonieren</button>
     </div>
   </form>
 </section>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+  function onSubmit(token) {
+    document.getElementById("mail-form").submit();
+  }
+</script>

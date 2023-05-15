@@ -16,7 +16,7 @@ pictures:
 
 Es isch en richtig coola Obig worda! Am Aafang hemmr üsi GV vorgno und di neua Vorstandsmitglieder iigweiht, drnoch hemmr es 'Quingo' gspielt, en Mix us Bingo und Quiz. Danka an alli wo mitgmacht händ :)
 
-### Ursprünglicha Post
+#### Ursprünglicha Post
 
 Leider gseht z Wetter de Donnstig nid so super uus, aber mir händ üs jetzt es super Alternativprogramm uusdenkt! Statt Grill würed mir üs für en gmüatlicha obig is Stall 6 begeh, wo mir üssi (ganz kurzi 😉) GV halted zum üsi neui Vorstandsmitglieder uufneh, und nocher en lustiga Spieliobig mached mit a rundi Drinks spendiart.
 

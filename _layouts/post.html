@@ -17,6 +17,8 @@ layout: default
                         <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
                     </ol>
                 </nav>
+                <hr />
+
 
                 {{content}}
 
@@ -32,22 +34,25 @@ layout: default
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 {% endif %}
+                <hr class="my-4" />
                 {% unless page.title == "Events" %}
-                <div class="d-flex mt-3">
+                <div class="d-flex">
                     {% if page.next %}
                     <a href="{{page.next.url}}" class="btn btn-secondary btn-rounded me-auto"><i
                             class="fa-solid fa-chevron-left mx-2"></i></a>
                     {% endif %}
+                    <h6 class="my-auto"><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=page.date %}
+                    </h6>
                     {% if page.previous %}
                     <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto"><i
                             class="fa-solid fa-chevron-right mx-2"></i></a>
                     {% endif %}
                 </div>
                 {% endunless %}
-                <hr class="my-5" />
+
 
                 {% unless page.title == "Events" %}
-                <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=page.date %}</h6>
+
                 {% else %}
                 Letztes Update:
                 <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=site.time %}</h6>

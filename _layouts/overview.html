@@ -1,12 +1,9 @@
 ---
 layout: default
 ---
-<!--Main layout-->
 <main class="mb-5 mt-3">
     <div class="container">
-        <!--Grid row-->
-        <div class="row">
-            <!--Grid column-->
+        <div class="row justify-content-center">
             <div class="col-md-9 mb-4">
 
                 {{ content }}
@@ -21,11 +18,11 @@ layout: default
                 <section>
                     <div class="row">
                         {% if post.image %}
-                        <div class="col-md-4 mb-4">
-                            <div class="bg-image hover-overlay shadow-5-strong rounded ripple"
+                        <div class="col mb-4">
+                            <div class="bg-image hover-overlay shadow-5-strong rounded ripple hover-zoom"
                                 data-mdb-ripple-color="light">
                                 {% picture jpt-webp "{{ post.image }}" 16:9 --img class="img-fluid rounded-4
-                                shadow-2-strong hover-shadow" --alt {{post.alt}} %}
+                                shadow-2-strong" --alt {{post.alt}} %}
                                 <a href="{{post.url}}">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>
@@ -37,7 +34,7 @@ layout: default
                             <a class="text-reset" href="{{post.url}}">
                                 <h5>{{post.title}}</h5>
                             </a>
-                            <h6><i class="fa-regular fa-calendar"></i> {% include date-ge.html date=post.date %} | <a
+                            <h6><i class="fa-regular fa-calendar me-1"></i> {% include date-ge.html date=post.date %} | <a
                                     class="text-reset" href="/{{post.categories[0]}}"><i
                                         class="fa-solid fa-folder-open mx-1"></i> {{post.categories[0] |
                                     capitalize}}</a></h6>
@@ -58,8 +55,8 @@ layout: default
                             {% endif %}
 
                         </div>
-                        <hr class="my-4" />
                 </section>
+                <hr class="my-4" />
                 {% endfor %}
                 {% endif %}
 
@@ -67,7 +64,7 @@ layout: default
             <!--Grid column-->
 
             <!--Grid column-->
-            <div class="col-md-3">
+            <div class="col" style="min-width: 330px; max-width: 500px;">
                 <!--Section: Sidebar-->
                 <section class="sticky-top" style="top: 80px;">
                     <!--Section: Registration Form-->

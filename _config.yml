@@ -9,6 +9,10 @@ future: true # allows you to use posts with a future date
 
 permalink: /:categories/:title/
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2

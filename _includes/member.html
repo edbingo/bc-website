@@ -1,0 +1,13 @@
+<div class="card mb-4">
+    {% if member.img %}
+    {% picture jpt-webp "{{ member.img }}" 1:1 --img class="card-img-top" --alt {{ member.name
+    }} %}
+    {% else %}
+    {% picture jpt-webp "assets/img/vorstand/blank.jpg" 1:1 --img class="card-img-top" --alt {{
+    member.name }} %}
+    {% endif %}
+    <div class="card-body">
+        <h5 class="card-title">{{member.name}}</h5>
+        <p class="card-text">{{member.role}}</p>
+    </div>
+</div>

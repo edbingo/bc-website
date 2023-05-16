@@ -5,8 +5,17 @@ permalink: "/about/"
 statuten: "/assets/pdf/Statuten-2023.pdf"
 ---
 
-<main class="my-5">
+
+<main class="my-3">
     <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item"> <a class="link-body-emphasis" href="/">
+                        <i class="bi bi-house-fill"></i>
+                    </a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
+            </ol>
+        </nav>
         <section class="">
 
             <div class="row">
@@ -51,7 +60,8 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                             <p class="card-text">Fertig mit der Matur, jetzt denkst du an ein mögliches Studium,
                                 vielleicht im Kanton
                                 Zürich?</p>
-                            <p class="card-text">Schreib uns unter <a href="mailto:{{site.email | encode_email}}">info &lt;at&gt; buendnerclub &lt;punkt&gt; ch</a>,
+                            <p class="card-text">Schreib uns unter <a href="mailto:{{site.email | encode_email}}">info
+                                    &lt;at&gt; buendnerclub &lt;punkt&gt; ch</a>,
                                 falls
                                 du irgendwelche Fragen zum Studium, zum Züri-Leben oder zum Bündnerclub hast.</p>
                             <p class="card-text">Insbesonders für Maturanden, schreib uns, falls dich eine der folgenden
@@ -62,58 +72,56 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                                 <li>Schnuppertag an der Hochschule - falls du ein Tag an einer Hochschule miterleben
                                     möchtest, bevor du dich für diese entscheidest</li>
                             </ul>
-                            <a href="mailto:{{site.email | encode_email}}" class="btn-primary btn-rounded btn d-block">Kontakt</a>
+                            <a href="mailto:{{site.email | encode_email}}"
+                                class="btn-primary btn-rounded btn d-block">Kontakt</a>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <h4 class="text-center">Unser Vorstand</h4>
+            <h4 class="text-center mb-4">Unser Vorstand</h4>
             <div class="row">
-                <div class="col-lg-3"></div>
+
+            </div>
+
+            {% if site.data.board.size > 4 %}
+            {% for member in site.data.board %}
+            {% if forloop.first %}
+            <div class="row text-center">
+                <div class="col-lg-6 mb-4">
+                    {% picture jpt-webp assets/img/static/vorstand.jpg --img class="img-fluid rounded" --alt Der
+                    Vorstand %}
+                </div>
                 <div class="col-lg-6">
-                    <div class="bg-image hover-overlay ripple rounded-4 mb-4" data-mdb-ripple-color="light">
-                        {% picture jpt-webp assets/img/static/vorstand.jpg --img class="img-fluid" --alt Der
-                        Vorstand %}
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                            {% include member.html %}
+                        </div>
+                        {% elsif forloop.index > 1 and forloop.index < 4 %} <div class="col-lg-6 col-sm-6">
+                            {% include member.html %}
+                    </div>
+                    {% elsif forloop.index == 4 %}
+                    <div class="col-lg-6 col-sm-6">
+                        {% include member.html %}
                     </div>
                 </div>
             </div>
-            <div class="row">
-                {% for member in site.data.board %}
-                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-                    <div class="card">
-                        {% if member.img %}
-                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            {% if member.url %}<a href="{{member.url}}" target="_blank">{% endif %}
-                                {% picture jpt-webp "{{ member.img }}" 1:1 --img class="img-fluid" --alt {{ member.name
-                                }} %}
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                {% if member.url %}
-                            </a>{% endif %}
-                        </div>
-                        {% else %}
-                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            {% if member.url %}<a href="{{member.url}}" target="_blank">{% endif %}
-                                {% picture jpt-webp "assets/img/vorstand/blank.jpg" 1:1 --img class="img-fluid" --alt {{
-                                member.name }} %}
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                {% if member.url %}
-                            </a>{% endif %}
-                        </div>
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{member.name}}</h5>
-                            <p class="card-text">{{member.role}}</p>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="d-flex justify-content-end">
-                <a href="/alter_vorstand" class="btn btn-rounded btn-info d-inline-flex ">Ehemalige Mitglieder</a>
-            </div>
-        </section>
+    </div>
+    <div class="row text-center">
+        {% elsif forloop.index > 4 %}
+        <div class="col-lg-3 col-sm-6">
+            {% include member.html %}
+        </div>
+        {% endif %}
+        {% endfor %}
+        {%else%}
+
+        {% endif %}
+
+    <div class="d-flex justify-content-end">
+        <a href="/alter_vorstand" class="btn btn-rounded btn-info d-inline-flex ">Ehemalige Mitglieder</a>
+    </div>
+    </section>
 
     </div>
 </main>

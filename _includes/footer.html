@@ -1,17 +1,14 @@
 <!--Footer-->
-<footer class="bg-light mt-auto">
+<footer class="bg-body-tertiary mt-auto">
     <div class="container">
-        <section>
-            <div>
-                {% picture jpt-webp "/assets/img/static/vseth_Logo_bunt.png" --img height="100px" --link https://vseth.ethz.ch --alt VSETH Logo %}
-            </div>
-        </section>
+        <img src="/assets/img/static/vseth_Logo_bylines_organisation.svg" alt="vseth logo" height="100px" id="vseth">
     </div>
     <!-- Copyright -->
-    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="text-center p-2 bg-body-secondary">
         © {{'now' | date: "%Y"}} Copyright:
-        <a class="text-dark" href="{{ site.url }}">Bündnerclub Zürich</a> <br />
-        <a href="https://github.com/edbingo/bc-website" class="text-dark"><i class="fa-brands fa-github"></i> Source Code</a>
+        <a class="text-reset" href="{{ site.url }}">Bündnerclub Zürich</a> <br />
+        <a class="text-reset text-decoration-none" href="https://github.com/edbingo/bc-website"><i class="bi bi-github me-1"></i> Source
+            Code</a>
     </div>
     <!-- Copyright -->
 </footer>

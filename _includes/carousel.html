@@ -1,17 +1,15 @@
-<div id="carouselExampleIndicators" class="carousel slide" data-mdb-ride="carousel">
-    {% if page.pictures.size > 1 %}
+<div id="carousel" class="carousel slide">
     <div class="carousel-indicators">
         {% for i in (1..page.pictures.size) %}
         {% if forloop.first %}
-        <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="{{i | minus: 1}}" class="active"
-            aria-current="true" aria-label="Slide {{i}}"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
         {% else %}
-        <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="{{i | minus: 1}}"
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="{{i | minus: 1}}"
             aria-label="Slide {{i}}"></button>
         {% endif %}
         {% endfor %}
     </div>
-    {% endif %}
     <div class="carousel-inner">
         {% for picture in page.pictures %}
         {% if forloop.first %}
@@ -26,13 +24,11 @@
         {% endfor %}
     </div>
     {% if page.pictures.size > 1 %}
-    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleIndicators"
-        data-mdb-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleIndicators"
-        data-mdb-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>

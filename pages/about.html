@@ -27,7 +27,14 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                                 welche Voraussetzungen erfüllt
                                 werden müssen um Aktivmitglied zu werden, wie die Generalversammlungen ablaufen müssen,
                                 usw.</p>
-                            <a href="{{page.statuten}}" class="btn btn-primary btn-rounded d-block">Statuten 2023</a>
+                            <a href="{{page.statuten}}" class="btn btn-primary btn-rounded d-block"><i class="bi bi-file-earmark-pdf-fill me-1"></i>Statuten 2023</a>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Kontakt</h5>
+                            <p class="card-text">Bei Allgemeinen Fragen zum Bündnerclub, zur Mitgliedschaft und zu unseren Events könnt Ihr uns mit folgendem Link erreichen:</p>
+                            <a href="mailto:{{site.email | encode_email}}" class="btn btn-primary btn-rounded d-block"><i class="bi bi-pencil-square me-1"></i>E-Mail schreiben</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +80,7 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
                                     möchtest, bevor du dich für diese entscheidest</li>
                             </ul>
                             <a href="mailto:{{site.email | encode_email}}"
-                                class="btn-primary btn-rounded btn d-block">Kontakt</a>
+                                class="btn-primary btn-rounded btn d-block"><i class="bi bi-pencil-square me-1"></i>Kontakt</a>
                         </div>
                     </div>
                 </div>
@@ -118,10 +125,10 @@ statuten: "/assets/pdf/Statuten-2023.pdf"
 
         {% endif %}
 
-    <div class="d-flex justify-content-end">
-        <a href="/alter_vorstand" class="btn btn-rounded btn-info d-inline-flex ">Ehemalige Mitglieder</a>
-    </div>
-    </section>
+        <div class="d-flex justify-content-end">
+            <a href="/alter_vorstand" class="btn btn-rounded btn-info d-inline-flex ">Ehemalige Mitglieder</a>
+        </div>
+        </section>
 
     </div>
 </main>

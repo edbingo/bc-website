@@ -7,6 +7,9 @@ whatsapp: "https://chat.whatsapp.com/HtiyEf8rcflFupPtGJIq7f"
 livereload: true # automatically reloads the webview on changes
 future: true # allows you to use posts with a future date
 
+tagline: "Verein Bündner Studierende in Zürich"
+description: "Offizielle Website des Bündnerclubs Zürich. Events, Mitglied werden, Über uns und mehr."
+
 permalink: /:categories/:title/
 
 sass:

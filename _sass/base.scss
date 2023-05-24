@@ -9,6 +9,15 @@ body {
   flex: 1;
 }
 
+.header-link {
+  text-decoration-color: transparent;
+}
+
+.header-link:hover {
+  color: inherit;
+  text-decoration-color: inherit;
+}
+
 .separator {
   border-right: 1px solid var(--separator-color);
   height: 1em;

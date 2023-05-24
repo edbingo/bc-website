@@ -26,27 +26,24 @@ layout: default
                         {% endif %}
 
                         <div class="col-md-8">
-                            <a class="text-reset link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                                href="{{post.url}}">
-                                <h4>{{post.title}}</h4>
+                            <a href="{{post.url}}" class="text-reset header-link">
+                                <h4 class="fw-bold">{{post.title}}</h4>
                             </a>
                             <h6><i class="bi bi-calendar-fill me-1"></i>{% include date-ge.html date=post.date %}<span
-                                    class="separator"></span><a
-                                    class="text-reset icon-link link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                                    href="/{{post.categories[0]}}"><i
-                                        class="bi bi-tag-fill"></i>{{post.categories[0] |
+                                    class="separator"></span><a class="text-reset header-link"
+                                    href="/{{post.categories[0]}}"><i class="bi bi-tag-fill mx-1"></i>{{post.categories[0] |
                                     capitalize}}</a></h6>
                             <p>
                                 {{post.excerpt}}
 
 
 
-                                <a href="{{post.url}}" class="btn btn-primary">Mehr Infos...</a>
+                                <a href="{{post.url}}" class="btn btn-primary shadow">Mehr Infos...</a>
 
                                 {% if post.signup %}
 
                                 <a href="{{post.signup}}" target="_blank" style="{{post.button_style}}"
-                                    class="btn btn-rounded btn-secondary ms-1">{{post.signup_text}}<i
+                                    class="btn btn-rounded btn-secondary shadow ms-1">{{post.signup_text}}<i
                                         class="bi bi-chevron-right ms-1"></i></a>
 
                                 {% endif %}

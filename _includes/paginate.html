@@ -1,27 +1,31 @@
 {% if paginator.total_pages > 1 %}
-<nav class="my-4" aria-label="...">
+<nav class="my-4" aria-label="Pagination">
     <ul class="pagination justify-content-center">
-        {% if paginator.previous_page %}
-        <a class="page-link" href="{{paginator.previous_page_path}}" aria-label="Previous">
-            <i class="fa-solid fa-chevron-left mx-2"></i>
-        </a>
-        {% endif %}
-        {% for i in (1..paginator.total_pages) %}
-        <li class="page-item {% if i == paginator.page %} active {% endif %}">
-            {% unless i == 1 %}
-            <a class="page-link mx-1" href="/{{i}}">{{i}}</a>
+        <li class="page-item">
+            {% unless paginator.page == paginator.first_page %}
+            <a class="page-link" href="{{paginator.previous_page_path}}" aria-label="Previous">
+                <i class="bi bi-chevron-left mx-1"></i></a>
             {% else %}
-            <a class="page-link mx-1" href="/">{{i}}</a>
+            <a class="page-link disabled" href="{{paginator.previous_page_path}}" aria-label="Previous">
+                <i class="bi bi-chevron-left mx-1"></i></a>
             {% endunless %}
         </li>
-        {% if page == paginator.page %}
-        {% endif %}
-        {% endfor %}
-        {% if paginator.next_page %}
-        <a class="page-link" href="{{paginator.next_page_path}}" aria-label="Next">
-            <i class="fa-solid fa-chevron-right mx-2"></i>
+
+        {% for trail in paginator.page_trail %}
+        <li class="page-item {% if page.url == trail.path %}active{% endif %}">
+            <a class="page-link" href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
         </li>
-        {% endif %}
+        {% endfor %}
+
+        <li class="page-item">
+            {% unless paginator.page == paginator.last_page %}
+            <a class="page-link" href="{{paginator.next_page_path}}" aria-label="Next">
+                <i class="bi bi-chevron-right mx-1"></i></a>
+            {% else %}
+            <a class="page-link disabled" href="{{paginator.next_page_path}}" aria-label="Next">
+                <i class="bi bi-chevron-right mx-1"></i></a>
+            {% endunless %}
+        </li>
     </ul>
 </nav>
 {% endif %}

@@ -43,3 +43,6 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
   title: ":title (Seite :num)"
+  trail:
+    before: 2
+    after: 2

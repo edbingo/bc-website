@@ -1,0 +1,46 @@
+<!-- Modal -->
+<div class="modal fade" id="mailModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+                <h1 class="fw-bold mb-0 fs-2">Jetzt Abbonieren</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-5 pt-0">
+                <form class="listmonk-form" method="post" action="https://list.buendnerclub.ch/subscription/form" target="_blank">
+                    <input type="hidden" name="nonce" />
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" class="form-control rounded-3" id="floatingInput"
+                            placeholder="name@example.com" required>
+                        <label for="floatingInput">Email Addresse</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="name" class="form-control rounded-3" id="floatingName"
+                            placeholder="Name">
+                        <label for="floatingName">Name</label>
+                    </div>
+                    <div class="my-3 bg-body-tertiary p-3 rounded">
+                        <h5 class="fw-bold">Ich möchte folgende Mails erhalten:</h4>
+                        <div class="form-check form-switch">
+                            <input id="ffd6b" class="form-check-input" type="checkbox" name="l" role="switch" checked
+                                value="ffd6be2c-0d00-434f-b078-7f9e259cfda0">
+                            <label class="form-check-label" for="ffd6b">Events</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input id="6a5ab" class="form-check-input" type="checkbox" name="l" role="switch" checked
+                                value="6a5ab8b4-fe4a-4c2d-be23-91290f33990b">
+                            <label class="form-check-label" for="6a5ab">Umfragen</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input id="461ab" class="form-check-input" type="checkbox" name="l" role="switch" checked
+                                value="461ab8f0-ba7c-45e8-b6cb-2d673e1d1425">
+                            <label class="form-check-label" for="461ab">Admin</label>
+                        </div>
+                    </div>
+                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

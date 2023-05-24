@@ -5,9 +5,6 @@ layout: default
     <div class="container">
         <div class="row justify-content-center">
             <div class=" col-sm-12 col-md-12 col-lg mb-4">
-
-
-
                 <nav aria-label="breadcrumb" class="bready-chevy">
                     <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
                         <li class="breadcrumb-item">
@@ -28,12 +25,8 @@ layout: default
                                 class="link-body-emphasis fw-semibold text-decoration-none">Archiv</a></li>
                         {% endif%}
                         <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
-
                     </ol>
                 </nav>
-
-
-
 
                 {{content}}
 
@@ -55,11 +48,18 @@ layout: default
                     {% if page.next %}
                     <a href="{{page.next.url}}" class="btn btn-secondary btn-rounded me-auto"><i
                             class="bi bi-chevron-left mx-2"></i></a>
+                    {% else %}
+                    <a href="#" class="btn btn-secondary btn-rounded me-auto disabled"><i
+                            class="bi bi-chevron-left mx-2"></i></a>
                     {% endif %}
-                    <h6 class="my-auto"><i class="bi bi-calendar-fill me-1"></i> {% include date-ge.html date=page.date %}
+                    <h6 class="my-auto"><i class="bi bi-calendar-fill me-1"></i> {% include date-ge.html date=page.date
+                        %}
                     </h6>
                     {% if page.previous %}
                     <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto"><i
+                            class="bi bi-chevron-right mx-2"></i></a>
+                    {% else %}
+                    <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto disabled"><i
                             class="bi bi-chevron-right mx-2"></i></a>
                     {% endif %}
                 </div>

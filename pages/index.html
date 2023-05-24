@@ -6,5 +6,8 @@ description: Willkommen auf der Homepage des Bündnerclubs Zürich
 pagination:
     enabled: true
 ---
-
+{% if paginator.page == paginator.first_page %}
 <h2>Neuste Posts</h2>
+{%else%}
+<h2>Seite {{paginator.page}}</h2>
+{%endif%}

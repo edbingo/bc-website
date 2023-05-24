@@ -20,7 +20,7 @@ layout: default
                     <div class="row">
                         {% if post.image %}
                         <div class="col mb-4">
-                            {% picture jpt-webp "{{ post.image }}" 16:9 --img class="img-fluid rounded
+                            {% picture jpt-webp "{{ post.image }}" 16:9 --img class="img-fluid rounded-4
                             shadow" --alt {{post.alt}} --link {{post.url}} %}
                         </div>
                         {% endif %}

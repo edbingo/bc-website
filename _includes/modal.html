@@ -9,7 +9,7 @@
 
             <div class="modal-body p-5 pt-0">
                 <form class="listmonk-form" method="post" action="https://list.buendnerclub.ch/subscription/form" target="_blank">
-                    <input type="hidden" name="nonce" />
+                    <input type="checkbox" name="nonce" value="1" style="display: none !important;" tabindex="-1" autocomplete="off"/>
                     <div class="form-floating mb-3">
                         <input type="email" name="email" class="form-control rounded-3" id="floatingInput"
                             placeholder="name@example.com" required>
@@ -38,9 +38,28 @@
                             <label class="form-check-label" for="461ab">Admin</label>
                         </div>
                     </div>
-                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Anmelden</button>
+                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" id="submit-button" type="submit">Anmelden</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+      var inputField = document.getElementById("floatingInput");
+      var button = document.getElementById("submit-button");
+  
+      function checkInput() {
+        if (inputField.value.length > 0) {
+          button.disabled = false;
+        } else {
+          button.disabled = true;
+        }
+      }
+
+      checkInput();
+  
+      inputField.addEventListener("input", checkInput);
+    })
+  </script>

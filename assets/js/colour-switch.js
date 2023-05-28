@@ -15,20 +15,22 @@
         document.documentElement.setAttribute('data-bs-theme', theme)
     }
 
-    const toggleTheme = (icon, image) => {
+    const toggleTheme = (icon, vseth, vsuzh) => {
         const currentTheme = document.documentElement.getAttribute('data-bs-theme')
         const newTheme = currentTheme === 'light' ? 'dark' : 'light'
-        setImages(newTheme, icon, image)
+        setImages(newTheme, icon, vseth, vsuzh)
         localStorage.setItem('theme', newTheme)
         setTheme(newTheme)
     }
 
-    const setImages = (theme, icon, image) => {
+    const setImages = (theme, icon, vseth, vsuzh) => {
         const bulbClass = theme === 'dark' ? 'bi-lightbulb-fill' : 'bi-lightbulb'
         icon.classList.remove('bi-lightbulb', 'bi-lightbulb-fill')
         icon.classList.add(bulbClass)
-        const imagePath = theme === 'dark' ? '/assets/img/static/vseth_Logo_bylines_organisation-invers.svg' : '/assets/img/static/vseth_Logo_bylines_organisation.svg'
-        image.src = imagePath
+        const vsethPath = theme === 'dark' ? '/assets/img/static/vseth_Logo_bylines_organisation-invers.svg' : '/assets/img/static/vseth_Logo_bylines_organisation.svg'
+        const vsuzhPath = theme === 'dark' ? '/assets/img/static/vsuzh_logo_dark.webp' : '/assets/img/static/vsuzh_logo_light.webp'
+        vseth.src = vsethPath
+        vsuzh.src = vsuzhPath
     }
 
     setTheme(getPreferredTheme())
@@ -42,11 +44,12 @@
     window.addEventListener('DOMContentLoaded', () => {
         const button = document.getElementById('colour-switch')
         const icon = button.querySelector('i')
-        const image = document.getElementById('vseth')
-        setImages(getPreferredTheme(), icon, image)
+        const vseth = document.getElementById('vseth')
+        const vsuzh = document.getElementById('vsuzh')
+        setImages(getPreferredTheme(), icon, vseth, vsuzh)
         button.addEventListener('click', (event) => {
             event.preventDefault()
-            toggleTheme(icon, image)
+            toggleTheme(icon, vseth, vsuzh)
         })
     })
 })()

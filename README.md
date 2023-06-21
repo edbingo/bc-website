@@ -17,10 +17,12 @@ The website can be build with ```bundle exec jekyll build```, and is written to 
 
 #### Creating events
 
-A file needs to be created for each event in the current semester and placed in the ```events/posts``` folder. The file name needs to be in the format ```YYYY-MM-DD-<name>.md```. The file needs to contain the following header:
+A file needs to be created for each event in the current semester and placed in the ```events/posts``` folder. The file name needs to be in the format ```YYYY-MM-DD-<name>.md```. The date should be set to the intended publish date of the post. If the post is hidden, the date is irrelevant. The file needs to contain the following header:
 
 ```yaml
 ---
+layout: post # required
+
 name: "Event" # Name of Event
 day: "20.04.2023" # Day of Event
 location: "Zürich" # Precise location of Event
@@ -41,9 +43,21 @@ alt: "alt text for image" # alt text for header image
 name: "Event" # Name of Event
 day: "20.04.2023" # Day of Event
 location: "Zürich" # Precise location of Event
-hidden: false
+hidden: false # Can be omitted
 ---
 ```
+
+Pictures can be added to the blog entry by adding the following front matter:
+
+```yaml
+---
+pictures:
+  - /assets/img/blog/event/picture1.jpg
+  - /assets/img/blog/event/picture2.jpg
+---
+```
+
+Multiple pictures will automatically be shown in a carousel.
 
 If an event is hidden with the option, it will not be shown on the home page, but will still be shown in the events table. Upon changing the hidden option, a link is automatically added to the table.
 

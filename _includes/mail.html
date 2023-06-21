@@ -1,12 +1,12 @@
-<div class="card text-center border border-secondary mb-4">
+<div class="card text-center mb-4 shadow-sm rounded-4" style="overflow: hidden;">
     <div>
         <h5 class="card-header">Mailingliste Abbonieren</h5>
         <div class="card-body">
             <p>Werda Teil vum Verein und abbonier üsa Newsletter. Kriag Updates zu üseri Events
                 und bliib immer ufem laufenda.</p>
             <div class="d-grid gap-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mailModal">
-                Abbonieren</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mailModal">
+                    Abbonieren</button>
             </div>
         </div>
     </div>
@@ -14,3 +14,44 @@
         <a href="https://list.buendnerclub.ch/archive" target="_blank">Mail Archiv</a>
     </div>
 </div>
+
+{% unless page.title == "Events" %}
+
+<div class="card shadow-sm mb-4 rounded-4" style="overflow: hidden;">
+    <div>
+        <h5 class="card-header text-center">Nächste Events</h5>
+        <div class="card-body">
+            {% if site.categories.events %}
+
+            <table class="table table-striped table-hover mb-0">
+                <caption class="pb-0">Events HS23</caption>
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for event in site.categories.events %}
+                    <tr class="align-middle">
+                        <td>{{event.day}}</td>
+                        {% unless event.hidden %}
+                        <td><a href="{{event.url}}">{{event.name}}</a></td>
+                        {% else %}
+                        <td>{{event.name}}</td>
+                        {% endunless %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            {% else %}
+            {% include noevents.html %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="card-footer text-muted text-center">
+        <a href="/events">Weitere Infos...</a>
+    </div>
+</div>
+{% endunless %}

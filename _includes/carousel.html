@@ -1,5 +1,5 @@
 {% if page.pictures.size > 1 %}
-<div id="carousel" class="carousel slide rounded-3 shadow" style="overflow: hidden;">
+<div id="carousel" class="carousel slide rounded-4 shadow-sm border mb-3" style="overflow: hidden;">
     <div class="carousel-indicators">
         {% for i in (1..page.pictures.size) %}
         {% if forloop.first %}
@@ -36,5 +36,5 @@
 
 </div>
 {%else%}
-{% picture jpt-webp {{page.pictures[0]}} 16:9 --img class="img-fluid rounded-3 shadow" %}
+{% picture jpt-webp {{page.pictures[0]}} 4:3 center --img class="img-fluid rounded-4 shadow-sm border mb-3" %}
 {% endif %}

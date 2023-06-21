@@ -9,5 +9,14 @@ pagination:
 {% if paginator.page == paginator.first_page %}
 <h2>Neuste Posts</h2>
 {%else%}
-<h2>Seite {{paginator.page}}</h2>
+<div class="row align-items-center">
+    <h2 class="col-3 mb-0">Seite {{paginator.page}}</h2>
+    <div class="col-6">
+
+        {% include paginate.html %}
+    </div>
+    <div class="col-3">
+
+    </div>
+</div>
 {%endif%}

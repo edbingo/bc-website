@@ -15,13 +15,12 @@ layout: default
 
                 {% else %}
                 {% for post in paginator.posts %}
-                <hr class="my-0" />
-                <section class="my-4">
+                <section class="my-3 border rounded-4 shadow-sm bg-body-primary p-3">
                     <div class="row">
                         {% if post.image %}
-                        <div class="col mb-4">
-                            {% picture jpt-webp "{{ post.image }}" 16:9 --img class="img-fluid rounded-4
-                            shadow" --alt {{post.alt}} --link {{post.url}} %}
+                        <div class="col">
+                            {% picture jpt-webp "{{ post.image }}" 16:10 center --img class="img-fluid rounded-4
+                            shadow-sm border mb-2 mb-md-0" --alt {{post.alt}} --link {{post.url}} %}
                         </div>
                         {% endif %}
 
@@ -31,28 +30,34 @@ layout: default
                             </a>
                             <h6><i class="bi bi-calendar-fill me-1"></i>{% include date-ge.html date=post.date %}<span
                                     class="separator"></span><a class="text-reset header-link"
-                                    href="/{{post.categories[0]}}"><i class="bi bi-tag-fill mx-1"></i>{{post.categories[0] |
+                                    href="/{{post.categories[0]}}"><i
+                                        class="bi bi-tag-fill mx-1"></i>{{post.categories[0] |
                                     capitalize}}</a></h6>
                             <p>
                                 {{post.excerpt}}
+                            </p>
 
-
-
-                                <a href="{{post.url}}" class="btn btn-primary shadow">Mehr Infos...</a>
-
+                            <div class="row justify-content-end g-2">
                                 {% if post.signup %}
-
-                                <a href="{{post.signup}}" target="_blank" style="{{post.button_style}}"
-                                    class="btn btn-rounded btn-secondary shadow ms-1">{{post.signup_text}}<i
-                                        class="bi bi-chevron-right ms-1"></i></a>
-
+                                <div class="col-auto">
+                                    <a href="{{post.signup}}" target="_blank" style="{{post.button_style}}"
+                                        class="btn btn-rounded btn-secondary shadow-sm">{{post.signup_text}}<i
+                                            class="bi bi-chevron-right ms-1"></i></a>
+                                </div>
                                 {% endif %}
+                                <div class="col-auto">
+                                    <a href="{{post.url}}" class="btn btn-primary shadow-sm">Mehr Infos...</a>
+                                </div>
+
+                            </div>
 
                         </div>
                 </section>
                 {% endfor %}
-                <hr class="mb-4">
                 {% endif %}
+                <div class="my-4">
+                    {% include paginate.html %}
+                </div>
 
             </div>
             <div class="col-lg-3" style="min-width: 260px;">
@@ -63,7 +68,5 @@ layout: default
                 </section>
             </div>
         </div>
-
-        {% include paginate.html %}
     </div>
 </main>

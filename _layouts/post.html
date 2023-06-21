@@ -6,7 +6,7 @@ layout: default
         <div class="row justify-content-center">
             <div class=" col-sm-12 col-md-12 col-lg mb-4">
                 <nav aria-label="breadcrumb" class="bready-chevy">
-                    <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+                    <ol class="breadcrumb breadcrumb-chevron p-3 border bg-body-tertiary rounded-4 shadow-sm">
                         <li class="breadcrumb-item">
                             <a class="link-body-emphasis" href="/">
                                 <i class="bi bi-house-fill"></i>
@@ -28,8 +28,11 @@ layout: default
                     </ol>
                 </nav>
 
+                <div class="border rounded-4 mb-3 shadow-sm p-3 pb-0 bg-body-primary">
+
                 {{content}}
 
+                </div>
                 {% if page.pictures %}
 
                 {% include carousel.html %}
@@ -37,43 +40,48 @@ layout: default
                 {% endif %}
 
                 {% if page.map %}
-                <div class="ratio ratio-16x9 rounded-3 shadow" style="overflow: hidden">
+                <div class="ratio ratio-16x9 rounded-3 shadow-sm" style="overflow: hidden">
                     <iframe src="{{page.map}}" title="Map" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 {% endif %}
-                <hr class="my-4" />
+
                 {% unless page.title == "Events" %}
-                <div class="d-flex" style="bottom: 0%;">
-                    {% if page.next %}
-                    <a href="{{page.next.url}}" class="btn btn-secondary btn-rounded me-auto"><i
-                            class="bi bi-chevron-left mx-2"></i></a>
-                    {% else %}
-                    <a href="#" class="btn btn-secondary btn-rounded me-auto disabled"><i
-                            class="bi bi-chevron-left mx-2"></i></a>
-                    {% endif %}
-                    <h6 class="my-auto"><i class="bi bi-calendar-fill me-1"></i> {% include date-ge.html date=page.date
-                        %}
-                    </h6>
-                    {% if page.previous %}
-                    <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto"><i
-                            class="bi bi-chevron-right mx-2"></i></a>
-                    {% else %}
-                    <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto disabled"><i
-                            class="bi bi-chevron-right mx-2"></i></a>
-                    {% endif %}
+                <div class="border p-3 shadow-sm rounded-4">
+                    <div class="d-flex" style="bottom: 0%;">
+                        {% if page.next %}
+                        <a href="{{page.next.url}}" class="btn btn-secondary btn-rounded me-auto shadow-sm"><i
+                                class="bi bi-chevron-left mx-2"></i></a>
+                        {% else %}
+                        <a href="#" class="btn btn-secondary btn-rounded me-auto disabled"><i
+                                class="bi bi-chevron-left mx-2"></i></a>
+                        {% endif %}
+                        <h6 class="my-auto"><i class="bi bi-calendar-fill me-1"></i> {% include date-ge.html date=page.date
+                            %}
+                        </h6>
+                        {% if page.previous %}
+                        <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto shadow-sm hover-shadow"><i
+                                class="bi bi-chevron-right mx-2"></i></a>
+                        {% else %}
+                        <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto disabled"><i
+                                class="bi bi-chevron-right mx-2"></i></a>
+                        {% endif %}
+                    </div>
                 </div>
 
                 {% else %}
+                <div class="border shadow-sm p-3 rounded-4 text-center">
+                    Letztes Update:
+                    <h6 class="mb-0"><i class="bi bi-calendar-fill me-1"></i> {% include date-ge.html date=site.time %}</h6>
 
-                Letztes Update:
-                <h6><i class="bi bi-calendar-fill me-1"></i> {% include date-ge.html date=site.time %}</h6>
+                </div>
+
                 {% endunless %}
 
             </div>
 
             <div class="col-lg-3" style="min-width: 260px;">
-                <section class="sticky-top">
+                <section class="sticky-top" style="top: 80px;">
                     {% include mail.html %}
                 </section>
             </div>

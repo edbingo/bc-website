@@ -1,6 +1,6 @@
 {% if paginator.total_pages > 1 %}
-<nav class="my-4" aria-label="Pagination">
-    <ul class="pagination justify-content-center">
+<nav class="my-auto" aria-label="Pagination">
+    <ul class="pagination justify-content-center my-2">
         <li class="page-item">
             {% unless paginator.page == paginator.first_page %}
             <a class="page-link" href="{{paginator.previous_page_path}}" aria-label="Previous">

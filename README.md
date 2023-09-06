@@ -24,7 +24,7 @@ A file needs to be created for each event in the current semester and placed in 
 layout: post # required
 
 name: "Event" # Name of Event
-day: "20.04.2023" # Day of Event
+day: "2023-12-31" # Day of Event
 location: "Zürich" # Precise location of Event
 hidden: true # Set to false once blog entry is written
 ---
@@ -41,7 +41,7 @@ image: "/assets/img/blog/headerImage.jpg" # header image
 alt: "alt text for image" # alt text for header image
 
 name: "Event" # Name of Event
-day: "20.04.2023" # Day of Event
+day: "2023-12-31" # Day of Event
 location: "Zürich" # Precise location of Event
 hidden: false # Can be omitted
 ---

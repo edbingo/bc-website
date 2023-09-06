@@ -32,9 +32,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for event in site.categories.events %}
+                    {% assign events = site.categories.events
+                    | sort: "day" %}
+                    {% for event in events %}
                     <tr class="align-middle">
-                        <td>{{event.day}}</td>
+                        <td>{% include date-short.html date=event.day
+                            %}</td>
                         {% unless event.hidden %}
                         <td><a href="{{event.url}}">{{event.name}}</a></td>
                         {% else %}

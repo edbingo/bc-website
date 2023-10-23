@@ -25,11 +25,11 @@ permalink: /events/
             <tr>
                 <td>{% include date-ge-noyear.html date=event.day
                     %}</td>
-                {% unless event.hidden %}
+                {% if event.hidden == false %}
                 <td><a href="{{event.url}}">{{event.name}}</a></td>
                 {% else %}
                 <td>{{event.name}}</td>
-                {% endunless %}
+                {% endif %}
                 <td>{{event.location}}</td>
             </tr>
             {% endfor %}

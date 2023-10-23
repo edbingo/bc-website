@@ -12,6 +12,8 @@ description: "Offizielle Website des Bündnerclubs Zürich. Events, Mitglied wer
 
 permalink: /:categories/:title/
 
+fest: true
+
 sass:
   sass_dir: _sass
   style: compressed
@@ -24,6 +26,8 @@ plugins:
   - jekyll-email-protect
 
 navigation:
+  - title: Bündnerfest
+    url: /fest/
   - title: Events
     url: /events/
   - title: Mitglied Werden

@@ -24,6 +24,8 @@ plugins:
   - jekyll-email-protect
 
 navigation:
+  - title: Bündnerfest
+    url: /fest/
   - title: Events
     url: /events/
   - title: Mitglied Werden

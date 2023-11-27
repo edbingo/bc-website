@@ -18,6 +18,7 @@ jobs:
         run: |
           gem install jekyll
           bundle install
+          sudo apt-get update
           sudo apt-get install libvips-tools -y
       - name: Build Jekyll Site
         run: JEKYLL_ENV=production bundle exec jekyll build

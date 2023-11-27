@@ -8,40 +8,6 @@ pagination:
 ---
 {% if paginator.page == paginator.first_page %}
 <h2>Neuste Posts</h2>
-{% if site.fest %}
-<section class="my-3 border rounded-4 shadow-sm bg-body-secondary p-3">
-    <div class="row">
-
-        <div class="col">
-            {% picture jpt-webp "/assets/img/blog/bfest-img.jpg" 16:10 center --img class="img-fluid rounded-4
-            shadow-sm border mb-2 mb-md-0" --alt "Aufnahme vom Bündner Fest" --link "/fest" %}
-        </div>
-
-
-        <div class="col-md-8">
-            <a href="/fest" class="text-reset header-link">
-                <h4 class="fw-bold">Bündner Fest 2023</h4>
-            </a>
-            <p>
-                Nach 3 Jahr freut es üs de Bündner Fest im grossa Stil wieder iizfüahra! Es sind alli iiglade mit üs in Bündnerstimmig z fiira.
-            </p>
-
-            <div class="row justify-content-end g-2">
-                <div class="col-auto">
-                    <a href="https://eventfrog.ch/de/p/party/studentenparty/buendnerfest-7121866359185563476.html" target="_blank"
-                        class="btn btn-primary shadow-sm" style="background-color: #53a600; border: 0;"><i
-                        class="bi bi-ticket me-1"></i>Tickets kaufen</a>
-                </div>
-                <div class="col-auto">
-                    <a href="/fest" class="btn btn-primary shadow-sm">Mehr Infos...</a>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</section>
-{% endif %}
 {%else%}
 <div class="row align-items-center">
     <h2 class="col-3 mb-0">Seite {{paginator.page}}</h2>

@@ -16,7 +16,12 @@ layout: default
                 {% else %}
                 {% for post in paginator.posts %}
                 {% unless post.feed == false %}
+                {% if post.featured %}
+                <section class="my-3 border rounded-4 shadow-sm bg-body-secondary p-3">
+                {% else %}
                 <section class="my-3 border rounded-4 shadow-sm bg-body-primary p-3">
+
+                {%endif%}
                     <div class="row">
                         {% if post.image %}
                         <div class="col">
@@ -29,11 +34,13 @@ layout: default
                             <a href="{{post.url}}" class="text-reset header-link">
                                 <h4 class="fw-bold">{{post.title}}</h4>
                             </a>
+                            {% unless post.featured %}
                             <h6><i class="bi bi-calendar-fill me-1"></i>{% include date-ge.html date=post.date %}<span
                                     class="separator"></span><a class="text-reset header-link"
                                     href="/{{post.categories[0]}}"><i
                                         class="bi bi-tag-fill mx-1"></i>{{post.categories[0] |
                                     capitalize}}</a></h6>
+                            {% endunless %}
                             <p>
                                 {{post.excerpt}}
                             </p>

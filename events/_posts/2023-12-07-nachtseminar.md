@@ -11,9 +11,6 @@ location: Plaza Club
 
 hidden: false
 
-signup: "https://files.buendnerclub.ch/index.php/apps/forms/s/mFXz37zzAXcExrD3ZJW4rXfJ"
-signup_text: "Gästeliste"
-
 map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.940348884132!2d8.522074577094383!3d47.37408270400416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a1bde2ffe39%3A0x10f613897e8f7e25!2sNachtseminar!5e0!3m2!1sen!2sch!4v1701903578797!5m2!1sen!2sch"
 ---
 

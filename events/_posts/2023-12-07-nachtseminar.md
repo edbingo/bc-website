@@ -18,8 +18,6 @@ Mir freued üs hüt wieder es Hosting bim Nachtseminar im Plaza z organisiara! A
 
 Als Mitglieder vum Bündnerclub könnd iahr eu ufd Gästelista iiträga, denn müand ihr kei Iitritt zahla und au nid aastoh.
 
-{% include button.html %}
-
 Es wird a lustigi und spannendi Nacht voller Musik, Tanz und Spass! De Vorstand wird au uma sii, und erwartet eu schu am Iigang und bir Lounge.
 
 Mir freued üs uf eu und hoffed dass iahr zahlriich uuftauched! Bis bald im Plaza! 🎉

@@ -1,11 +1,19 @@
 # bc-website
 Website for the Student Organistation [Bündnerclub Zürich](https://buendnerclub.ch) created with Jekyll
 
+## Installing Ruby
+
+Assuming a Linux install environment, first install RVM following instructions from [rvm.io](https://rvm.io/). Then install Ruby 3.3.0 with ```rvm install 3.3.0```. Set the default Ruby version with ```rvm use 3.3.0 --default```.
+
 ## How to run locally
 
 All Ruby deps can be installed by running ```bundle install```
 
-Additionally libvips is required for the image processing. Ubuntu: ```sudo apt install libvips-tools```
+Additionally libvips is required for the image processing. 
+
+Ubuntu: ```sudo apt install libvips-tools```
+
+Arch: ```sudo pacman -S libvips```
 
 To run the website locally run ```bundle exec jekyll serve``` and open [http://localhost:4000](http://localhost:4000) in your browser
 

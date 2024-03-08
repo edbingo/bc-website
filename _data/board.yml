@@ -2,7 +2,7 @@
   role: Sponsoring
   img: /assets/img/vorstand/Anouk_Mettier.jpg
 - name: Edward Lancaster
-  role: Präsident
+  role: Co-Präsident
   img: /assets/img/vorstand/Edward_Lancaster.jpg
   url: https://elancaster.ch
 - name: Lilli Senteler
@@ -14,11 +14,8 @@
 - name: Luana Just
   role: Events
   img: /assets/img/vorstand/Luana_Just.jpg
-- name: Paula Frey
-  role: Events
-  img: /assets/img/vorstand/Paula_Frey.jpg
 - name: Marco Calonder
-  role: Events
+  role: Kassier
   img: /assets/img/vorstand/Marco_Calonder.jpg
 - name: Marco Luigi Vitetti
   role: Kommunikation
@@ -27,8 +24,11 @@
   role: Kassierin
   img: /assets/img/vorstand/Miranda_Fanconi.jpg
 - name: Noël Crufer
-  role: Sponsoring
+  role: Co-Präsident
   img: /assets/img/vorstand/Noel_Crufer.jpg
+- name: Paula Frey
+  role: Events
+  img: /assets/img/vorstand/Paula_Frey.jpg
 - name: Davide Ferrari
   role: Revisor
   img: /assets/img/vorstand/Davide_Ferrari.jpg

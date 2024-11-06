@@ -60,7 +60,7 @@ layout: default
                                 class="bi bi-chevron-left mx-2"></i></a>
                         {% endif %}
                         <h6 class="my-auto"><i class="bi bi-calendar-fill me-1"></i> {% include date-ge.html date=page.date
-                            %}
+                            %}  | <i class="bi bi-geo-alt-fill"></i> {{page.location}}
                         </h6>
                         {% if page.previous %}
                         <a href="{{page.previous.url}}" class="btn btn-secondary btn-rounded ms-auto shadow-sm hover-shadow"><i

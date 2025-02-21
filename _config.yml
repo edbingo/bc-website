@@ -3,7 +3,7 @@ title: "Bündnerclub Zürich" # the name of your site, e.g. ACME Corp.
 email: "info@buendnerclub.ch"
 instagram: "https://www.instagram.com/buendnerclub_zurich/"
 whatsapp: "https://chat.whatsapp.com/HtiyEf8rcflFupPtGJIq7f"
-semester: "HS24"
+semester: "FS24"
 
 livereload: true # automatically reloads the webview on changes
 future: true # allows you to use posts with a future date

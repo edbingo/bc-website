@@ -19,7 +19,7 @@ jobs:
           gem install jekyll
           bundle install
           sudo apt-get update
-          sudo apt-get install libvips-tools -y
+          sudo apt-get install libvips-tools -y --no-install-recommends
       - name: Build Jekyll Site
         run: JEKYLL_ENV=production bundle exec jekyll build
       - name: Copy to remote Server

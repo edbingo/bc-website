@@ -4,14 +4,14 @@
 
     <!-- Navbar brand -->
     <a class="navbar-brand" href="{{site.url}}">
-      {% picture jpt-webp /assets/img/static/bock.png 1:1 --img height="24" class="d-inline-block align-text-top me-2" --alt Logo vom Bündnerclub Zürich%}
+      {% picture jpt-webp /assets/img/static/bock_logo.webp 1:1 --img height="24" class="d-inline-block align-text-top me-2" --alt Logo vom Bündnerclub Zürich%}
        Bündnerclub Zürich
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
       aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="navbar-collapse collapse" id="navbar">
       <ul class="navbar-nav me-auto">
         {% for screen in site.navigation %}
         <li class="nav-item">

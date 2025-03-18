@@ -17,7 +17,7 @@ signup: "https://forms.gle/wQRvqvdUs5R3WDCF8"
 
 <div class="row">
 <div class="col-12 col-md-6 me-auto pb-sm-3">
-<img src="/assets/img/blog/vstigr.jpg" alt="alt text for image" class="img-fluid rounded">
+<img src="/assets/img/blog/vstigr.jpg" alt="alt text for image" class="img-fluid rounded shadow-sm">
 </div>
 <div class="col-12 col-md-6">
 <p>{{page.excerpt}}</p>

@@ -10,9 +10,6 @@ excerpt: "Mir freued üs a Kollaborativa Game Night mit em Walliser und Tessiner
 name: "Game Night" # Name of Event
 day: "2025-03-27" # Day of Event
 location: "HXE Hönggerberg" # Precise location of Event
-
-signup_text: "Jetzt anmelden"
-signup: "https://forms.gle/wQRvqvdUs5R3WDCF8"
 ---
 
 <div class="row">
@@ -28,6 +25,5 @@ signup: "https://forms.gle/wQRvqvdUs5R3WDCF8"
 Die Mitglieder von ASTAZ, SSVT und dem Bünderclub sind bereit, sich in den unterschiedlichsten Fragen zu messen – von Memes bis zu Klassikern – mit Drinks, Preisen und einzigartiger Stimmung! 🍹🏆
 📲 Anmeldung: Startet am 20. März um 18:00 Uhr. Die Plätze sind begrenzt, also zögert nicht zu lange!
 Welches Team wird gewinnen? Finden wir es gemeinsam heraus! 👑</p>
-{% include button.html %}
 </div>
 </div>

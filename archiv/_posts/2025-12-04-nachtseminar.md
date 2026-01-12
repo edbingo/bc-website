@@ -12,9 +12,6 @@ location: Plaza Club
 hidden: false
 
 map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.940348884132!2d8.522074577094383!3d47.37408270400416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a1bde2ffe39%3A0x10f613897e8f7e25!2sNachtseminar!5e0!3m2!1sen!2sch!4v1701903578797!5m2!1sen!2sch"
-
-signup: "https://forms.gle/Xut6SStCsNHDVCx18"
-signup_text: "Guestlist"
 ---
 
 Mir freued üs hüt wieder es Hosting bim Nachtseminar im Plaza z organisiara! Am **Donnstig, 04.12.2025 ab 22:00** goht's los! Bim Iigang kriaged iahr a Bündner Gemind zuateilt, findet öppert mit em gliicha Gmeind und gwünned en Gratis Drink!

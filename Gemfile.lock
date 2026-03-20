@@ -20,17 +20,20 @@ GEM
     http_parser.rb (0.8.1)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
-    jekyll (4.3.4)
+    jekyll (4.4.1)
       addressable (~> 2.4)
+      base64 (~> 0.2)
       colorator (~> 1.0)
+      csv (~> 3.0)
       em-websocket (~> 0.5)
       i18n (~> 1.0)
       jekyll-sass-converter (>= 2.0, < 4.0)
       jekyll-watch (~> 2.0)
+      json (~> 2.6)
       kramdown (~> 2.3, >= 2.3.1)
       kramdown-parser-gfm (~> 1.0)
       liquid (~> 4.0)
-      mercenary (>= 0.3.6, < 0.5)
+      mercenary (~> 0.3, >= 0.3.6)
       pathutil (~> 0.9)
       rouge (>= 3.0, < 5.0)
       safe_yaml (~> 1.0)
@@ -56,6 +59,7 @@ GEM
       objective_elements (~> 1.1)
       rainbow (~> 3.0)
       ruby-vips (~> 2.2)
+    json (2.19.2)
     kramdown (2.5.2)
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
@@ -101,7 +105,7 @@ DEPENDENCIES
   bigdecimal
   csv
   http_parser.rb (~> 0.6.0)
-  jekyll (~> 4.3.2)
+  jekyll (~> 4.4.1)
   jekyll-email-protect
   jekyll-feed
   jekyll-paginate-v2

@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 
 
-gem "jekyll", "~> 4.3.2"
+gem "jekyll", "~> 4.4.1"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do

@@ -3,8 +3,8 @@
 {
 	"name": "Jekyll",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
-	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y libvips-tools --no-install-recommends"
+	"image": "mcr.microsoft.com/devcontainers/jekyll:latest",
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y libvips-tools --no-install-recommends",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

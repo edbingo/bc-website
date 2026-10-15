@@ -1,9 +1,10 @@
+- name: Bianca Domenig
+  img: /assets/img/vorstand/blank.jpg
 - name: Edward Lancaster
-  role: Co-Präsident
+  role: Webmaster
   img: /assets/img/vorstand/Edward_Lancaster.jpg
-- name: Linda Fanconi
-  role: Aktuarin
-  img: /assets/img/vorstand/Linda_Fanconi.jpg
+- name: Gian-Luca Tschuor
+  img: /assets/img/vorstand/GianLuca_Tschuor.jpg
 - name: Luana Just
   role: Events
   img: /assets/img/vorstand/Luana_Just.jpg
@@ -13,15 +14,14 @@
 - name: Marco Luigi Vitetti
   role: Kommunikation
   img: /assets/img/vorstand/Marco_Luigi_Vitetti.jpg
+- name: Mauro Von Moos
+  img: /assets/img/vorstand/Mauro_VonMoos.jpg
+- name: Nevio Zanetti
+  img: /assets/img/vorstand/Nevio_Zanetti.jpg
 - name: Noël Crufer
-  role: Co-Präsident
+  role: Präsident
   img: /assets/img/vorstand/Noel_Crufer.jpg
 - name: Paula Frey
   role: Events
   img: /assets/img/vorstand/Paula_Frey.jpg
-- name: Davide Ferrari
-  role: Revisor
-  img: /assets/img/vorstand/Davide_Ferrari.jpg
-- name: Miranda Fanconi
-  role: Revisorin
-  img: /assets/img/vorstand/Miranda_Fanconi.jpg
+

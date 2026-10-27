@@ -1,14 +1,17 @@
 - name: Bianca Domenig
+  role: Events
   img: /assets/img/vorstand/Bianca_Domenig.jpg
 - name: Edward Lancaster
   role: Webmaster
   img: /assets/img/vorstand/Edward_Lancaster.jpg
 - name: Elena Engel
+  role: Events
   img: /assets/img/vorstand/Elena_Engel.jpg
 - name: Gian-Luca Tschuor
+  Role: Events
   img: /assets/img/vorstand/GianLuca_Tschuor.jpg
 - name: Luana Just
-  role: Events
+  role: Ko-Präsidentin
   img: /assets/img/vorstand/Luana_Just.jpg
 - name: Marco Calonder
   role: Kassier
@@ -17,11 +20,13 @@
   role: Kommunikation
   img: /assets/img/vorstand/Marco_Luigi_Vitetti.jpg
 - name: Mauro Von Moos
+  role: Aktuar
   img: /assets/img/vorstand/Mauro_VonMoos.jpg
 - name: Nevio Zanetti
+  role: Events
   img: /assets/img/vorstand/Nevio_Zanetti.jpg
 - name: Noël Crufer
-  role: Präsident
+  role: Ko-Präsident
   img: /assets/img/vorstand/Noel_Crufer.jpg
 - name: Paula Frey
   role: Events
